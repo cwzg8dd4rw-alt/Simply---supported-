@@ -102,7 +102,7 @@ label{font-size:13px;font-weight:700}input,select,textarea{width:100%;padding:13
 </div></footer>
 
 <script>
-const BUSINESS_EMAIL = "YOUR_EMAIL_HERE";
+const BUSINESS_EMAIL = "simplysupported@protonmail.com";
 document.getElementById("bookingForm").addEventListener("submit", function(e){
  e.preventDefault();
  const data = new FormData(this);
@@ -116,11 +116,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e){
  "Approx. hours: "+data.get("hours")+"\n\n"+
  "Requirements:\n"+data.get("details")
  );
- if(BUSINESS_EMAIL === "YOUR_EMAIL_HERE"){
-   alert("Please replace YOUR_EMAIL_HERE in the website code with your business email before publishing.");
- } else {
-   window.location.href = "mailto:"+BUSINESS_EMAIL+"?subject="+subject+"&body="+body;
- }
+ window.location.href = "mailto:"+BUSINESS_EMAIL+"?subject="+subject+"&body="+body;
 });
 </script>
 </body></html>
