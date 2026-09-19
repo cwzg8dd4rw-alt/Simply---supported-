@@ -6,19 +6,20 @@
 
 <title>Simply Supported | Admin & PA Support</title>
 
-<meta name="description" content="Simply Supported provides flexible general admin, personal assistant, errand and practical support.">
+<meta name="description" content="Simply Supported offers flexible general admin, personal assistant and practical support for individuals and small businesses.">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
 :root{
   --cream:#fbf8f4;
-  --rose:#b77f88;
-  --rose-dark:#9e6972;
-  --ink:#29282e;
-  --muted:#6d6c78;
   --white:#ffffff;
-  --border:#e7ded8;
+  --ink:#29282e;
+  --muted:#686875;
+  --rose:#b97d88;
+  --rose-light:#f5e9ea;
+  --border:#e4ddd8;
+  --dark:#29282e;
 }
 
 *{
@@ -34,7 +35,7 @@ body{
   background:var(--cream);
   color:var(--ink);
   font-family:"DM Sans",Arial,sans-serif;
-  line-height:1.7;
+  line-height:1.6;
 }
 
 a{
@@ -42,7 +43,7 @@ a{
 }
 
 .wrap{
-  width:min(1100px, calc(100% - 40px));
+  width:min(1100px,calc(100% - 40px));
   margin:auto;
 }
 
@@ -51,8 +52,8 @@ header{
   top:0;
   z-index:10;
   background:rgba(251,248,244,.96);
-  border-bottom:1px solid var(--border);
   backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
 }
 
 .nav{
@@ -87,7 +88,7 @@ header{
   text-decoration:none;
   background:var(--rose);
   color:white;
-  padding:14px 25px;
+  padding:15px 25px;
   border-radius:999px;
   font-weight:700;
 }
@@ -105,25 +106,26 @@ header{
 
 .eyebrow{
   color:var(--rose);
-  font-size:13px;
+  font-size:14px;
   font-weight:700;
   letter-spacing:3px;
   text-transform:uppercase;
 }
 
-h1{
-  margin:15px 0 20px;
+h1,h2{
   font-family:"Playfair Display",serif;
-  font-size:clamp(52px,8vw,86px);
-  line-height:1.02;
-  letter-spacing:-2px;
+  font-weight:600;
+  line-height:1.08;
+}
+
+h1{
+  font-size:clamp(42px,6vw,64px);
+  margin:15px 0;
 }
 
 h2{
-  margin:10px 0 15px;
-  font-family:"Playfair Display",serif;
-  font-size:clamp(38px,6vw,58px);
-  line-height:1.1;
+  font-size:clamp(38px,5vw,56px);
+  margin:10px 0 20px;
 }
 
 .hero p{
@@ -144,8 +146,8 @@ h2{
   text-decoration:none;
   padding:15px 25px;
   border-radius:999px;
-  font-weight:700;
   border:1px solid var(--ink);
+  font-weight:700;
 }
 
 .btn.primary{
@@ -165,9 +167,7 @@ h2{
 .hero-card .big{
   color:var(--rose);
   font-family:"Playfair Display",serif;
-  font-size:50px;
-  line-height:1;
-  margin-bottom:15px;
+  font-size:54px;
 }
 
 .hero-card p{
@@ -179,13 +179,14 @@ section{
 }
 
 .section-intro{
-  max-width:700px;
-  margin-bottom:40px;
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 45px;
 }
 
 .section-intro p{
   color:var(--muted);
-  font-size:18px;
+  font-size:19px;
 }
 
 .cards{
@@ -198,36 +199,59 @@ section{
   background:white;
   border:1px solid var(--border);
   border-radius:28px;
-  padding:32px;
+  padding:38px;
 }
 
 .icon{
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:36px;
+  margin-bottom:25px;
 }
 
 .card h3{
-  margin:0 0 14px;
   font-size:27px;
-  line-height:1.2;
+  margin:0 0 20px;
 }
 
 .card p{
   color:var(--muted);
-  margin:0 0 22px;
+  font-size:17px;
 }
 
 .price{
   color:var(--rose);
-  font-size:21px;
+  font-size:22px;
   font-weight:700;
+  margin-top:22px;
+}
+
+.dark{
+  background:var(--dark);
+  color:white;
+}
+
+.dark .eyebrow{
+  color:#c58b96;
+}
+
+.dark p{
+  color:#dddce0;
+}
+
+.points{
+  display:grid;
+  gap:14px;
+  margin-top:35px;
+}
+
+.point{
+  border:1px solid #55545b;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  font-size:18px;
 }
 
 .steps{
-  background:#f5ebe8;
-}
-
-.step-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:22px;
@@ -235,165 +259,121 @@ section{
 
 .step{
   background:white;
+  border:1px solid var(--border);
   border-radius:25px;
   padding:30px;
 }
 
 .step-number{
   color:var(--rose);
-  font-size:14px;
   font-weight:700;
+  font-size:14px;
   letter-spacing:2px;
 }
 
 .step h3{
-  margin:10px 0;
-  font-size:23px;
+  font-size:22px;
 }
 
 .step p{
   color:var(--muted);
 }
 
-.about{
-  background:white;
-}
-
-.about-box{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
-}
-
-.about-box p{
-  color:var(--muted);
-  font-size:19px;
-}
-
 .booking{
-  background:#f5ebe8;
-}
-
-.booking-box{
   background:white;
-  border-radius:30px;
-  padding:35px;
-  border:1px solid var(--border);
 }
 
 form{
-  display:grid;
-  gap:18px;
-}
-
-.row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
+  max-width:760px;
+  margin:auto;
 }
 
 label{
   display:block;
-  margin-bottom:7px;
-  font-weight:600;
+  font-weight:700;
+  margin:20px 0 8px;
 }
 
 input,
 select,
 textarea{
   width:100%;
-  padding:14px 15px;
-  border:1px solid #d9d0cb;
-  border-radius:12px;
+  padding:16px;
+  border:1px solid #d8d1cc;
+  border-radius:16px;
   background:white;
-  color:var(--ink);
   font:inherit;
+  font-size:16px;
 }
 
 textarea{
-  min-height:140px;
+  min-height:150px;
   resize:vertical;
 }
 
-button{
-  border:0;
-  cursor:pointer;
-  background:var(--rose);
-  color:white;
-  padding:16px 24px;
-  border-radius:999px;
-  font:inherit;
-  font-weight:700;
-}
-
-.notice{
-  color:var(--muted);
-  font-size:14px;
+.form-note{
+  background:var(--rose-light);
+  color:#76565c;
+  border-radius:18px;
+  padding:18px;
+  margin:25px 0;
 }
 
 footer{
-  padding:45px 0;
-  border-top:1px solid var(--border);
-  background:var(--cream);
+  background:var(--dark);
+  color:white;
+  padding:40px 0;
 }
 
 .footer-inner{
   display:flex;
   justify-content:space-between;
-  gap:25px;
-  flex-wrap:wrap;
-}
-
-.footer-links{
-  display:flex;
   gap:20px;
   flex-wrap:wrap;
 }
 
-.footer-links a{
-  color:var(--muted);
+footer a{
+  color:white;
   text-decoration:none;
 }
 
-.small{
-  color:var(--muted);
-  font-size:13px;
+footer p{
+  color:#ccc;
 }
 
 @media(max-width:800px){
-  .hero-grid,
-  .cards,
-  .step-grid{
-    grid-template-columns:1fr;
+  .wrap{
+    width:min(100% - 32px,1100px);
   }
 
   .hero{
-    padding:60px 0 45px;
+    padding:60px 0;
+  }
+
+  .hero-grid,
+  .cards,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .hero-card{
+    margin-top:15px;
   }
 
   section{
     padding:65px 0;
   }
 
-  .hero-card{
-    padding:30px;
-  }
-
-  .row{
-    grid-template-columns:1fr;
+  .nav{
+    min-height:76px;
   }
 
   .brand strong{
-    font-size:27px;
-  }
-
-  .brand span{
-    font-size:11px;
-    letter-spacing:2px;
+    font-size:28px;
   }
 
   .nav-btn{
-    padding:12px 18px;
+    padding:13px 18px;
   }
 }
 </style>
@@ -403,12 +383,14 @@ footer{
 
 <header>
   <div class="wrap nav">
+
     <a href="#" class="brand">
       <strong>Simply Supported</strong>
       <span>ADMIN • PA SUPPORT</span>
     </a>
 
     <a href="#book" class="nav-btn">Book support</a>
+
   </div>
 </header>
 
@@ -420,7 +402,7 @@ footer{
     <div>
       <div class="eyebrow">Practical support, made simple</div>
 
-      <h1>Extra hands, exactly when you need them.</h1>
+      <h1>An extra pair of hands, exactly when you need them.</h1>
 
       <p>
         Flexible admin, personal assistant and practical support
@@ -443,7 +425,7 @@ footer{
 
       <strong>From £20/hour</strong>
 
-      <p class="small">
+      <p>
         A tailored quote is provided before any work begins.
       </p>
     </div>
@@ -453,9 +435,11 @@ footer{
 
 
 <section id="services">
+
   <div class="wrap">
 
     <div class="section-intro">
+
       <div class="eyebrow">What I can help with</div>
 
       <h2>Support that fits around you.</h2>
@@ -464,11 +448,14 @@ footer{
         Choose the type of support you need, or get in touch
         to discuss something more specific.
       </p>
+
     </div>
+
 
     <div class="cards">
 
       <div class="card">
+
         <div class="icon">💻</div>
 
         <h3>General Admin</h3>
@@ -479,10 +466,12 @@ footer{
         </p>
 
         <div class="price">£20/hour</div>
+
       </div>
 
 
       <div class="card">
+
         <div class="icon">👜</div>
 
         <h3>Personal Assistant &amp; Errand Support</h3>
@@ -490,255 +479,282 @@ footer{
         <p>
           Practical help when you need an extra pair of hands,
           including errands, shopping, collections, drop-offs,
-          posting parcels and other agreed PA tasks.
+          posting parcels, appointment organisation and other
+          agreed PA tasks.
         </p>
 
         <div class="price">£30/hour</div>
+
       </div>
 
 
       <div class="card">
+
         <div class="icon">✨</div>
 
         <h3>Flexible Support</h3>
 
         <p>
-          One-off or occasional support tailored around what
-          you need, available remotely or in person by arrangement.
+          One-off or occasional support for tasks that don't
+          fit neatly into one category. Tell me what you need
+          and we can discuss whether I can help.
         </p>
 
         <div class="price">From £20/hour</div>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 
-<section class="steps">
+<section class="dark">
+
   <div class="wrap">
 
     <div class="section-intro">
+
+      <div class="eyebrow">Why Simply Supported</div>
+
+      <h2>Real experience. Flexible availability.</h2>
+
+      <p>
+        Reliable, practical support with tasks agreed around
+        your needs and availability.
+      </p>
+
+    </div>
+
+
+    <div class="points">
+
+      <div class="point">✓ Reliable, professional support</div>
+
+      <div class="point">✓ Remote admin available</div>
+
+      <div class="point">✓ Practical PA support available</div>
+
+      <div class="point">✓ Ad-hoc or recurring help</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-intro">
+
       <div class="eyebrow">How it works</div>
+
       <h2>Simple from start to finish.</h2>
+
     </div>
 
-    <div class="step-grid">
+
+    <div class="steps">
 
       <div class="step">
+
         <div class="step-number">01</div>
+
         <h3>Tell me what you need</h3>
+
         <p>
-          Send an enquiry with the type of support, preferred
-          date and any useful details.
+          Send an enquiry with the type of support,
+          preferred date and any useful details.
         </p>
+
       </div>
 
+
       <div class="step">
+
         <div class="step-number">02</div>
-        <h3>We'll agree the details</h3>
+
+        <h3>I'll check availability</h3>
+
         <p>
-          I'll check availability and confirm whether the task
-          is something I can help with, along with the price.
+          I'll review your request and confirm whether
+          I can help on the date and at the time requested.
         </p>
+
       </div>
 
+
       <div class="step">
+
         <div class="step-number">03</div>
-        <h3>Get the support you need</h3>
+
+        <h3>Agree the work</h3>
+
         <p>
-          Once everything is agreed, I'll provide the support
-          at the arranged time.
+          Once the task, time and price are agreed,
+          we'll arrange the support.
         </p>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 
-<section class="about">
-  <div class="wrap about-box">
+<section id="book" class="booking">
 
-    <div class="eyebrow">Why Simply Supported</div>
-
-    <h2>Professional help, without the fuss.</h2>
-
-    <p>
-      Simply Supported provides flexible, practical support for
-      individuals and small businesses who need an extra pair
-      of hands without committing to another full-time employee.
-    </p>
-
-    <p>
-      Every request is considered individually and work is only
-      accepted where the task is within the agreed service,
-      experience and reasonable capabilities of the business.
-    </p>
-
-  </div>
-</section>
-
-
-<section class="booking" id="book">
   <div class="wrap">
 
     <div class="section-intro">
+
       <div class="eyebrow">Bookings &amp; enquiries</div>
 
       <h2>Tell me what you need.</h2>
 
       <p>
-        Complete the form below and I'll review your request
-        and come back to you with availability and next steps.
+        Complete the form and I'll review your request
+        and come back with availability and a quote.
       </p>
-    </div>
-
-    <div class="booking-box">
-
-      <form id="bookingForm">
-
-        <div class="row">
-
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required>
-          </div>
-
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-
-        </div>
-
-
-        <div class="row">
-
-          <div>
-            <label for="service">Service</label>
-
-            <select id="service" name="service" required>
-
-              <option value="">Choose a service</option>
-
-              <option>General Admin</option>
-
-              <option>Personal Assistant &amp; Errand Support</option>
-
-              <option>Flexible Support</option>
-
-            </select>
-          </div>
-
-
-          <div>
-            <label for="date">Preferred date</label>
-            <input id="date" name="date" type="date">
-          </div>
-
-        </div>
-
-
-        <div>
-          <label for="time">Preferred time / availability</label>
-
-          <input
-            id="time"
-            name="time"
-            type="text"
-            placeholder="e.g. Saturday morning or 10:00–14:00"
-          >
-        </div>
-
-
-        <div>
-          <label for="hours">Approx. hours</label>
-
-          <input
-            id="hours"
-            name="hours"
-            type="text"
-            placeholder="e.g. 2 hours"
-          >
-        </div>
-
-
-        <div>
-          <label for="message">What do you need help with?</label>
-
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Tell me a little about what you need..."
-            required
-          ></textarea>
-        </div>
-
-
-        <button type="submit">Send enquiry</button>
-
-        <div class="notice">
-          Submitting this form opens an email to
-          simplysupported@protonmail.com. Availability and price
-          are confirmed before any work begins.
-        </div>
-
-      </form>
 
     </div>
+
+
+    <form id="bookingForm">
+
+      <div class="form-note">
+        Every request is subject to availability and agreement
+        of the task, date, time and price before work begins.
+      </div>
+
+
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+
+      <label for="service">Service</label>
+
+      <select id="service" name="service" required>
+
+        <option value="">Choose a service</option>
+
+        <option>General Admin — £20/hour</option>
+
+        <option>Personal Assistant &amp; Errand Support — £30/hour</option>
+
+        <option>Flexible Support — from £20/hour</option>
+
+      </select>
+
+
+      <label for="date">Preferred date</label>
+      <input id="date" name="date" type="date">
+
+
+      <label for="time">Preferred time</label>
+      <input id="time" name="time" type="text" placeholder="e.g. 10:00–14:00">
+
+
+      <label for="hours">Approx. hours</label>
+      <input id="hours" name="hours" type="text" placeholder="e.g. 2 hours">
+
+
+      <label for="details">What do you need help with?</label>
+
+      <textarea
+        id="details"
+        name="details"
+        placeholder="Tell me a little about what you need..."
+        required
+      ></textarea>
+
+
+      <div class="buttons">
+
+        <button
+          type="submit"
+          class="btn primary"
+          style="cursor:pointer;font:inherit;"
+        >
+          Send enquiry
+        </button>
+
+      </div>
+
+    </form>
+
   </div>
+
 </section>
 
 </main>
 
 
 <footer>
+
   <div class="wrap footer-inner">
 
     <div>
       <strong>Simply Supported</strong>
-
-      <div class="small">
-        Flexible admin &amp; PA support
-      </div>
+      <p>Flexible admin &amp; PA support.</p>
     </div>
 
-    <div class="footer-links">
+    <div>
       <a href="terms.html">Terms &amp; Conditions</a>
+      &nbsp; • &nbsp;
       <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:simplysupported@protonmail.com">Email me</a>
     </div>
 
   </div>
+
 </footer>
 
 
 <script>
+
 document.getElementById("bookingForm").addEventListener("submit", function(event){
 
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const service = document.getElementById("service").value;
-  const date = document.getElementById("date").value;
-  const time = document.getElementById("time").value;
-  const hours = document.getElementById("hours").value;
-  const message = document.getElementById("message").value;
+  const form = event.target;
+
+  const name = form.name.value;
+  const email = form.email.value;
+  const service = form.service.value;
+  const date = form.date.value;
+  const time = form.time.value;
+  const hours = form.hours.value;
+  const details = form.details.value;
 
   const subject =
     "Simply Supported booking enquiry — " + service;
 
   const body =
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Service: " + service + "\n" +
-    "Preferred date: " + date + "\n" +
-    "Preferred time / availability: " + time + "\n" +
-    "Approx. hours: " + hours + "\n\n" +
-    "What they need help with:\n" +
-    message;
+`Name: ${name}
+
+Email: ${email}
+
+Service: ${service}
+
+Preferred date: ${date}
+
+Preferred time: ${time}
+
+Approx. hours: ${hours}
+
+What they need help with:
+${details}`;
 
   window.location.href =
     "mailto:simplysupported@protonmail.com" +
@@ -746,6 +762,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     "&body=" + encodeURIComponent(body);
 
 });
+
 </script>
 
 </body>
