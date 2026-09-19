@@ -6,10 +6,10 @@
 
 <title>Simply Supported | Admin & PA Support</title>
 
-<meta name="description" content="Simply Supported offers flexible general admin, personal assistant and practical support for individuals and small businesses.">
+<meta name="description" content="Simply Supported provides flexible general admin and personal assistant support for individuals and small businesses.">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root{
   --cream:#fbf8f4;
@@ -34,8 +34,8 @@ body{
   margin:0;
   background:var(--cream);
   color:var(--ink);
-  font-family:"DM Sans",Arial,sans-serif;
-  line-height:1.6;
+  font-family:'DM Sans',Arial,sans-serif;
+  line-height:1.7;
 }
 
 a{
@@ -43,21 +43,21 @@ a{
 }
 
 .wrap{
-  width:min(1100px,calc(100% - 40px));
+  width:min(1120px,92%);
   margin:auto;
 }
 
 header{
   position:sticky;
   top:0;
-  z-index:10;
+  z-index:20;
   background:rgba(251,248,244,.96);
-  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
 }
 
 .nav{
-  min-height:82px;
+  min-height:96px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -66,12 +66,13 @@ header{
 
 .brand{
   text-decoration:none;
+  display:block;
 }
 
 .brand strong{
   display:block;
-  font-family:"Playfair Display",serif;
-  font-size:32px;
+  font-family:'Playfair Display',serif;
+  font-size:38px;
   line-height:1;
 }
 
@@ -79,7 +80,7 @@ header{
   display:block;
   margin-top:8px;
   color:var(--rose);
-  font-size:13px;
+  font-size:14px;
   font-weight:700;
   letter-spacing:3px;
 }
@@ -88,19 +89,24 @@ header{
   text-decoration:none;
   background:var(--rose);
   color:white;
-  padding:15px 25px;
-  border-radius:999px;
+  padding:16px 26px;
+  border-radius:40px;
   font-weight:700;
+  white-space:nowrap;
+}
+
+section{
+  padding:90px 0;
 }
 
 .hero{
-  padding:90px 0 70px;
+  padding:100px 0 80px;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
+  grid-template-columns:1.15fr .85fr;
+  gap:55px;
   align-items:center;
 }
 
@@ -108,80 +114,86 @@ header{
   color:var(--rose);
   font-size:14px;
   font-weight:700;
-  letter-spacing:3px;
+  letter-spacing:4px;
   text-transform:uppercase;
 }
 
 h1,h2{
-  font-family:"Playfair Display",serif;
+  font-family:'Playfair Display',serif;
   font-weight:600;
-  line-height:1.08;
+  line-height:1.02;
+  margin:18px 0 25px;
 }
 
 h1{
-  font-size:clamp(42px,6vw,64px);
-  margin:15px 0;
+  font-size:clamp(54px,8vw,92px);
 }
 
 h2{
-  font-size:clamp(38px,5vw,56px);
-  margin:10px 0 20px;
+  font-size:clamp(44px,6vw,70px);
+}
+
+h3{
+  font-size:28px;
+  line-height:1.2;
+  margin:18px 0;
 }
 
 .hero p{
-  max-width:650px;
   color:var(--muted);
-  font-size:20px;
+  font-size:22px;
+  max-width:680px;
 }
 
 .buttons{
   display:flex;
+  gap:18px;
   flex-wrap:wrap;
-  gap:14px;
-  margin-top:30px;
+  margin-top:32px;
 }
 
 .btn{
   display:inline-block;
   text-decoration:none;
-  padding:15px 25px;
-  border-radius:999px;
-  border:1px solid var(--ink);
+  padding:17px 30px;
+  border-radius:40px;
   font-weight:700;
+  border:1px solid var(--ink);
 }
 
 .btn.primary{
   background:var(--rose);
-  color:white;
   border-color:var(--rose);
+  color:white;
 }
 
 .hero-card{
   background:white;
   border:1px solid var(--border);
-  border-radius:30px;
-  padding:38px;
-  box-shadow:0 20px 60px rgba(80,50,50,.08);
+  border-radius:35px;
+  padding:45px;
 }
 
 .hero-card .big{
   color:var(--rose);
-  font-family:"Playfair Display",serif;
-  font-size:54px;
+  font-family:'Playfair Display',serif;
+  font-size:64px;
+  line-height:1;
+  margin-bottom:25px;
 }
 
 .hero-card p{
-  font-size:17px;
+  font-size:18px;
+  margin:0 0 25px;
 }
 
-section{
-  padding:85px 0;
+.hero-card strong{
+  font-size:20px;
 }
 
 .section-intro{
-  text-align:center;
   max-width:760px;
-  margin:0 auto 45px;
+  margin-bottom:45px;
 }
 
 .section-intro p{
@@ -191,67 +203,54 @@ section{
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
 }
 
 .card{
   background:white;
   border:1px solid var(--border);
-  border-radius:28px;
-  padding:38px;
+  border-radius:30px;
+  padding:42px;
 }
 
 .icon{
-  font-size:36px;
+  font-size:42px;
   margin-bottom:25px;
-}
-
-.card h3{
-  font-size:27px;
-  margin:0 0 20px;
 }
 
 .card p{
   color:var(--muted);
-  font-size:17px;
+  font-size:18px;
 }
 
 .price{
   color:var(--rose);
-  font-size:22px;
+  font-size:25px;
   font-weight:700;
-  margin-top:22px;
+  margin-top:25px;
 }
 
-.dark{
-  background:var(--dark);
-  color:white;
+.about{
+  background:white;
 }
 
-.dark .eyebrow{
-  color:#c58b96;
-}
-
-.dark p{
-  color:#dddce0;
-}
-
-.points{
-  display:grid;
-  gap:14px;
-  margin-top:35px;
-}
-
-.point{
-  border:1px solid #55545b;
-  border-radius:20px;
-  padding:20px;
+.about-inner{
+  max-width:900px;
+  margin:auto;
   text-align:center;
-  font-size:18px;
+}
+
+.about-inner p{
+  color:var(--muted);
+  font-size:21px;
 }
 
 .steps{
+  background:var(--rose-light);
+}
+
+.step-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:22px;
@@ -259,121 +258,203 @@ section{
 
 .step{
   background:white;
-  border:1px solid var(--border);
-  border-radius:25px;
-  padding:30px;
+  border-radius:30px;
+  padding:38px;
 }
 
 .step-number{
   color:var(--rose);
+  font-size:25px;
   font-weight:700;
-  font-size:14px;
-  letter-spacing:2px;
 }
 
 .step h3{
-  font-size:22px;
+  font-size:25px;
 }
 
 .step p{
   color:var(--muted);
+  font-size:17px;
 }
 
 .booking{
-  background:white;
+  background:var(--rose-light);
 }
 
-form{
-  max-width:760px;
+.booking-intro{
+  max-width:800px;
+  margin-bottom:45px;
+}
+
+.booking-intro p{
+  color:var(--muted);
+  font-size:20px;
+}
+
+.form-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:35px;
+  padding:50px;
+  max-width:900px;
   margin:auto;
 }
 
 label{
   display:block;
   font-weight:700;
-  margin:20px 0 8px;
+  font-size:18px;
+  margin:0 0 10px;
+}
+
+.field{
+  margin-bottom:25px;
 }
 
 input,
 select,
 textarea{
   width:100%;
-  padding:16px;
-  border:1px solid #d8d1cc;
-  border-radius:16px;
+  padding:18px;
+  border:2px solid var(--border);
+  border-radius:18px;
   background:white;
+  color:var(--ink);
   font:inherit;
-  font-size:16px;
+  font-size:17px;
 }
 
 textarea{
-  min-height:150px;
+  min-height:180px;
   resize:vertical;
 }
 
+input:focus,
+select:focus,
+textarea:focus{
+  outline:none;
+  border-color:var(--rose);
+}
+
+.submit{
+  width:100%;
+  border:0;
+  background:var(--rose);
+  color:white;
+  padding:19px;
+  border-radius:40px;
+  font:inherit;
+  font-size:20px;
+  font-weight:700;
+  cursor:pointer;
+}
+
 .form-note{
-  background:var(--rose-light);
-  color:#76565c;
-  border-radius:18px;
-  padding:18px;
-  margin:25px 0;
+  color:var(--muted);
+  margin-top:25px;
+  font-size:16px;
 }
 
 footer{
-  background:var(--dark);
-  color:white;
-  padding:40px 0;
+  background:white;
+  border-top:1px solid var(--border);
+  padding:65px 0;
 }
 
-.footer-inner{
+.footer-grid{
   display:flex;
   justify-content:space-between;
-  gap:20px;
+  gap:40px;
   flex-wrap:wrap;
 }
 
-footer a{
-  color:white;
+.footer-brand strong{
+  display:block;
+  font-size:28px;
+}
+
+.footer-brand p{
+  color:var(--muted);
+}
+
+.footer-links{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.footer-links a{
+  color:var(--muted);
   text-decoration:none;
 }
 
-footer p{
-  color:#ccc;
+.footer-links a:hover{
+  color:var(--rose);
 }
 
 @media(max-width:800px){
-  .wrap{
-    width:min(100% - 32px,1100px);
-  }
-
-  .hero{
-    padding:60px 0;
-  }
-
-  .hero-grid,
-  .cards,
-  .steps{
-    grid-template-columns:1fr;
-  }
-
-  .hero-card{
-    margin-top:15px;
-  }
-
-  section{
-    padding:65px 0;
-  }
 
   .nav{
-    min-height:76px;
+    min-height:85px;
   }
 
   .brand strong{
-    font-size:28px;
+    font-size:31px;
+  }
+
+  .brand span{
+    font-size:11px;
+    letter-spacing:2.5px;
   }
 
   .nav-btn{
     padding:13px 18px;
+    font-size:14px;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero{
+    padding:70px 0;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  h1{
+    font-size:55px;
+  }
+
+  h2{
+    font-size:48px;
+  }
+
+  .hero p{
+    font-size:19px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .step-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card,
+  .hero-card,
+  .step,
+  .form-card{
+    padding:32px;
+  }
+
+  .footer-grid{
+    flex-direction:column;
   }
 }
 </style>
@@ -394,28 +475,41 @@ footer p{
   </div>
 </header>
 
+
 <main>
 
 <section class="hero">
+
   <div class="wrap hero-grid">
 
     <div>
+
       <div class="eyebrow">Practical support, made simple</div>
 
-      <h1>An extra pair of hands, exactly when you need them.</h1>
+      <h1>Extra hands, exactly when you need them.</h1>
 
       <p>
-        Flexible admin, personal assistant and practical support
-        without the commitment of taking on another full-time employee.
+        Flexible admin and personal assistant support without the
+        commitment of taking on another full-time employee.
       </p>
 
       <div class="buttons">
-        <a href="#book" class="btn primary">Check availability</a>
-        <a href="#services" class="btn">View services</a>
+
+        <a href="#book" class="btn primary">
+          Check availability
+        </a>
+
+        <a href="#services" class="btn">
+          View services
+        </a>
+
       </div>
+
     </div>
 
+
     <div class="hero-card">
+
       <div class="big">Flexible.</div>
 
       <p>
@@ -425,12 +519,14 @@ footer p{
 
       <strong>From £20/hour</strong>
 
-      <p>
+      <p class="form-note">
         A tailored quote is provided before any work begins.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
 
@@ -453,6 +549,7 @@ footer p{
 
 
     <div class="cards">
+
 
       <div class="card">
 
@@ -488,22 +585,6 @@ footer p{
       </div>
 
 
-      <div class="card">
-
-        <div class="icon">✨</div>
-
-        <h3>Flexible Support</h3>
-
-        <p>
-          One-off or occasional support for tasks that don't
-          fit neatly into one category. Tell me what you need
-          and we can discuss whether I can help.
-        </p>
-
-        <div class="price">From £20/hour</div>
-
-      </div>
-
     </div>
 
   </div>
@@ -511,42 +592,32 @@ footer p{
 </section>
 
 
-<section class="dark">
+<section class="about">
 
-  <div class="wrap">
+  <div class="wrap about-inner">
 
-    <div class="section-intro">
+    <div class="eyebrow">Why Simply Supported</div>
 
-      <div class="eyebrow">Why Simply Supported</div>
+    <h2>Professional help, without the fuss.</h2>
 
-      <h2>Real experience. Flexible availability.</h2>
+    <p>
+      Simply Supported provides flexible, practical support for
+      individuals and small businesses who need an extra pair
+      of hands without committing to another full-time employee.
+    </p>
 
-      <p>
-        Reliable, practical support with tasks agreed around
-        your needs and availability.
-      </p>
-
-    </div>
-
-
-    <div class="points">
-
-      <div class="point">✓ Reliable, professional support</div>
-
-      <div class="point">✓ Remote admin available</div>
-
-      <div class="point">✓ Practical PA support available</div>
-
-      <div class="point">✓ Ad-hoc or recurring help</div>
-
-    </div>
+    <p>
+      Every request is considered individually and work is only
+      accepted where the task is within the agreed service,
+      experience and reasonable capabilities of the business.
+    </p>
 
   </div>
 
 </section>
 
 
-<section>
+<section class="steps">
 
   <div class="wrap">
 
@@ -559,7 +630,8 @@ footer p{
     </div>
 
 
-    <div class="steps">
+    <div class="step-grid">
+
 
       <div class="step">
 
@@ -568,8 +640,8 @@ footer p{
         <h3>Tell me what you need</h3>
 
         <p>
-          Send an enquiry with the type of support,
-          preferred date and any useful details.
+          Send an enquiry with the type of support, preferred
+          date and any useful details.
         </p>
 
       </div>
@@ -579,11 +651,11 @@ footer p{
 
         <div class="step-number">02</div>
 
-        <h3>I'll check availability</h3>
+        <h3>We'll agree the details</h3>
 
         <p>
-          I'll review your request and confirm whether
-          I can help on the date and at the time requested.
+          I'll check availability and confirm whether the task
+          is something I can help with, along with the price.
         </p>
 
       </div>
@@ -593,14 +665,15 @@ footer p{
 
         <div class="step-number">03</div>
 
-        <h3>Agree the work</h3>
+        <h3>Get the support you need</h3>
 
         <p>
-          Once the task, time and price are agreed,
-          we'll arrange the support.
+          Once everything is agreed, I'll provide the support
+          at the arranged time.
         </p>
 
       </div>
+
 
     </div>
 
@@ -613,86 +686,136 @@ footer p{
 
   <div class="wrap">
 
-    <div class="section-intro">
+    <div class="booking-intro">
 
       <div class="eyebrow">Bookings &amp; enquiries</div>
 
       <h2>Tell me what you need.</h2>
 
       <p>
-        Complete the form and I'll review your request
-        and come back with availability and a quote.
+        Complete the form below and I'll review your request
+        and come back to you with availability and next steps.
       </p>
 
     </div>
 
 
-    <form id="bookingForm">
+    <div class="form-card">
 
-      <div class="form-note">
-        Every request is subject to availability and agreement
-        of the task, date, time and price before work begins.
-      </div>
+      <form id="bookingForm">
 
+        <div class="field">
 
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required>
+          <label for="name">Name</label>
 
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required>
-
-
-      <label for="service">Service</label>
-
-      <select id="service" name="service" required>
-
-        <option value="">Choose a service</option>
-
-        <option>General Admin — £20/hour</option>
-
-        <option>Personal Assistant &amp; Errand Support — £30/hour</option>
-
-        <option>Flexible Support — from £20/hour</option>
-
-      </select>
+        </div>
 
 
-      <label for="date">Preferred date</label>
-      <input id="date" name="date" type="date">
+        <div class="field">
+
+          <label for="email">Email</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+
+        </div>
 
 
-      <label for="time">Preferred time</label>
-      <input id="time" name="time" type="text" placeholder="e.g. 10:00–14:00">
+        <div class="field">
+
+          <label for="service">Service</label>
+
+          <select
+            id="service"
+            name="service"
+            required
+          >
+
+            <option value="">Choose a service</option>
+
+            <option value="General Admin">
+              General Admin — £20/hour
+            </option>
+
+            <option value="Personal Assistant & Errand Support">
+              Personal Assistant & Errand Support — £30/hour
+            </option>
+
+          </select>
+
+        </div>
 
 
-      <label for="hours">Approx. hours</label>
-      <input id="hours" name="hours" type="text" placeholder="e.g. 2 hours">
+        <div class="field">
+
+          <label for="date">Preferred date</label>
+
+          <input
+            type="text"
+            id="date"
+            name="date"
+            placeholder="e.g. Saturday morning or 10:00–14:00"
+            required
+          >
+
+        </div>
 
 
-      <label for="details">What do you need help with?</label>
+        <div class="field">
 
-      <textarea
-        id="details"
-        name="details"
-        placeholder="Tell me a little about what you need..."
-        required
-      ></textarea>
+          <label for="hours">Approx. hours</label>
+
+          <input
+            type="text"
+            id="hours"
+            name="hours"
+            placeholder="e.g. 2 hours"
+          >
+
+        </div>
 
 
-      <div class="buttons">
+        <div class="field">
 
-        <button
-          type="submit"
-          class="btn primary"
-          style="cursor:pointer;font:inherit;"
-        >
+          <label for="requirements">
+            What do you need help with?
+          </label>
+
+          <textarea
+            id="requirements"
+            name="requirements"
+            placeholder="Tell me a little about what you need..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button type="submit" class="submit">
           Send enquiry
         </button>
 
-      </div>
 
-    </form>
+        <p class="form-note">
+          Submitting this form opens an email to
+          simplysupported@protonmail.com.
+          Availability and price are confirmed before any work begins.
+        </p>
+
+      </form>
+
+    </div>
 
   </div>
 
@@ -703,17 +826,31 @@ footer p{
 
 <footer>
 
-  <div class="wrap footer-inner">
+  <div class="wrap footer-grid">
 
-    <div>
+    <div class="footer-brand">
+
       <strong>Simply Supported</strong>
-      <p>Flexible admin &amp; PA support.</p>
+
+      <p>Flexible admin &amp; PA support</p>
+
     </div>
 
-    <div>
-      <a href="terms.html">Terms &amp; Conditions</a>
-      &nbsp; • &nbsp;
-      <a href="privacy.html">Privacy Policy</a>
+
+    <div class="footer-links">
+
+      <a href="terms.html">
+        Terms &amp; Conditions
+      </a>
+
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="mailto:simplysupported@protonmail.com">
+        Email me
+      </a>
+
     </div>
 
   </div>
@@ -727,18 +864,28 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
 
   event.preventDefault();
 
-  const form = event.target;
+  const name =
+    document.getElementById("name").value.trim();
 
-  const name = form.name.value;
-  const email = form.email.value;
-  const service = form.service.value;
-  const date = form.date.value;
-  const time = form.time.value;
-  const hours = form.hours.value;
-  const details = form.details.value;
+  const email =
+    document.getElementById("email").value.trim();
+
+  const service =
+    document.getElementById("service").value;
+
+  const date =
+    document.getElementById("date").value.trim();
+
+  const hours =
+    document.getElementById("hours").value.trim();
+
+  const requirements =
+    document.getElementById("requirements").value.trim();
+
 
   const subject =
     "Simply Supported booking enquiry — " + service;
+
 
   const body =
 `Name: ${name}
@@ -747,14 +894,13 @@ Email: ${email}
 
 Service: ${service}
 
-Preferred date: ${date}
-
-Preferred time: ${time}
+Preferred date/time: ${date}
 
 Approx. hours: ${hours}
 
-What they need help with:
-${details}`;
+What do you need help with:
+${requirements}`;
+
 
   window.location.href =
     "mailto:simplysupported@protonmail.com" +
