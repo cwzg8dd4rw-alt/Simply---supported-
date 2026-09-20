@@ -1,735 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Terms & Conditions | Simply Supported</title>
+  <title>Terms & Conditions | Ready & Sorted</title>
 
-<meta name="description" content="Terms and Conditions for Simply Supported admin and personal assistant services.">
+  <meta name="description" content="Terms and Conditions for Ready & Sorted admin and personal assistant support services.">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-:root{
-  --cream:#fbf8f4;
-  --white:#ffffff;
-  --ink:#29282e;
-  --muted:#686875;
-  --rose:#b97d88;
-  --border:#e4ddd8;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7f5;
+      color: #3f3938;
+      line-height: 1.7;
+    }
 
-*{
-  box-sizing:border-box;
-}
+    a {
+      color: #9b6f69;
+    }
 
-html{
-  scroll-behavior:smooth;
-}
+    .container {
+      width: 90%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
 
-body{
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:'DM Sans',Arial,sans-serif;
-  line-height:1.7;
-}
+    header {
+      background: #f7eee9;
+      padding: 30px 0;
+      border-bottom: 1px solid #eadbd4;
+    }
 
-a{
-  color:var(--rose);
-}
+    .brand {
+      text-decoration: none;
+      display: inline-block;
+    }
 
-.wrap{
-  width:min(900px,92%);
-  margin:auto;
-}
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: #554a48;
+    }
 
-header{
-  background:var(--cream);
-  border-bottom:1px solid var(--border);
-}
+    .brand-subtitle {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #9b7770;
+      margin-top: 2px;
+    }
 
-.nav{
-  min-height:100px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
+    main {
+      padding: 55px 0 70px;
+    }
 
-.brand{
-  text-decoration:none;
-  color:var(--ink);
-}
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: #4b4240;
+      margin-bottom: 8px;
+    }
 
-.brand strong{
-  display:block;
-  font-family:'Playfair Display',serif;
-  font-size:34px;
-  line-height:1;
-}
+    .updated {
+      color: #817572;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
 
-.brand span{
-  display:block;
-  margin-top:8px;
-  color:var(--rose);
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:3px;
-}
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #554a48;
+      margin-top: 38px;
+      margin-bottom: 12px;
+    }
 
-.back{
-  text-decoration:none;
-  font-weight:700;
-}
+    p {
+      margin-bottom: 15px;
+    }
 
-main{
-  padding:75px 0;
-}
+    ul {
+      margin: 10px 0 18px 22px;
+    }
 
-.eyebrow{
-  color:var(--rose);
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
+    li {
+      margin-bottom: 6px;
+    }
 
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(45px,7vw,70px);
-  line-height:1.05;
-  margin:15px 0 10px;
-}
+    .service {
+      background: #f7eee9;
+      border: 1px solid #eadbd4;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 15px 0;
+    }
 
-.updated{
-  color:var(--muted);
-  margin-bottom:55px;
-}
+    .service strong {
+      color: #554a48;
+    }
 
-.content{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:30px;
-  padding:45px;
-}
+    .back {
+      display: inline-block;
+      margin-top: 40px;
+      background: #b98282;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 14px;
+    }
 
-h2{
-  font-family:'Playfair Display',serif;
-  font-size:30px;
-  line-height:1.2;
-  margin:38px 0 15px;
-}
+    footer {
+      background: #4b4240;
+      color: #f9f2ef;
+      padding: 30px 0;
+    }
 
-h2:first-child{
-  margin-top:0;
-}
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
 
-h3{
-  font-size:20px;
-  margin:25px 0 10px;
-}
+    .footer-brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
 
-p{
-  margin:0 0 18px;
-}
+    .footer-text {
+      font-size: 13px;
+      color: #ddd0cc;
+      margin-top: 3px;
+    }
 
-ul{
-  margin:0 0 22px;
-  padding-left:25px;
-}
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-li{
-  margin-bottom:8px;
-}
+    .footer-links a {
+      color: #f9f2ef;
+      font-size: 13px;
+      text-decoration: none;
+    }
 
-.rate{
-  font-weight:700;
-  color:var(--rose);
-}
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
 
-footer{
-  background:white;
-  border-top:1px solid var(--border);
-  padding:45px 0;
-}
+      h2 {
+        font-size: 23px;
+      }
 
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-footer p{
-  color:var(--muted);
-  margin:0;
-}
-
-@media(max-width:700px){
-
-  .nav{
-    min-height:85px;
-  }
-
-  .brand strong{
-    font-size:28px;
-  }
-
-  .brand span{
-    font-size:10px;
-    letter-spacing:2px;
-  }
-
-  .back{
-    font-size:14px;
-  }
-
-  main{
-    padding:55px 0;
-  }
-
-  .content{
-    padding:28px;
-    border-radius:24px;
-  }
-
-  h1{
-    font-size:48px;
-  }
-
-  h2{
-    font-size:27px;
-  }
-}
-</style>
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-
-  <div class="wrap nav">
-
-    <a href="index.html" class="brand">
-      <strong>Simply Supported</strong>
-      <span>ADMIN • PA SUPPORT</span>
-    </a>
-
-    <a href="index.html" class="back">
-      ← Back to website
-    </a>
-
-  </div>
-
-</header>
+  <header>
+    <div class="container">
+      <a href="index.html" class="brand">
+        <div class="brand-name">Ready &amp; Sorted</div>
+        <div class="brand-subtitle">ADMIN • PA SUPPORT</div>
+      </a>
+    </div>
+  </header>
 
 
-<main>
+  <main>
+    <div class="container">
 
-  <div class="wrap">
+      <h1>Terms &amp; Conditions</h1>
 
-    <div class="eyebrow">Simply Supported</div>
-
-    <h1>Terms &amp; Conditions</h1>
-
-    <p class="updated">
-      Last updated: September 2026
-    </p>
+      <div class="updated">
+        Last updated: September 2026
+      </div>
 
 
-    <div class="content">
+      <p>
+        These Terms &amp; Conditions apply to services provided by
+        Ready &amp; Sorted ("Ready &amp; Sorted", "we", "us" or "our").
+      </p>
+
+      <p>
+        By requesting and agreeing to receive services from Ready &amp; Sorted,
+        you agree to these Terms &amp; Conditions.
+      </p>
 
 
       <h2>1. Our Services</h2>
 
       <p>
-        Simply Supported provides flexible, ad hoc support in two main areas:
+        Ready &amp; Sorted provides flexible, ad hoc administrative and
+        personal assistant support.
       </p>
 
-      <h3>General Admin — £20 per hour</h3>
+      <div class="service">
+        <strong>General Admin — £20 per hour</strong>
 
-      <p>This may include:</p>
+        <ul>
+          <li>Email support</li>
+          <li>Data entry</li>
+          <li>Spreadsheets</li>
+          <li>Document preparation</li>
+          <li>Research</li>
+          <li>Scheduling</li>
+          <li>Correspondence</li>
+          <li>General administrative tasks</li>
+        </ul>
+      </div>
 
-      <ul>
-        <li>Email support</li>
-        <li>Data entry</li>
-        <li>Spreadsheets</li>
-        <li>Document preparation</li>
-        <li>Research</li>
-        <li>Scheduling</li>
-        <li>Correspondence</li>
-        <li>General administrative tasks</li>
-      </ul>
+      <div class="service">
+        <strong>Personal Assistant &amp; Errand Support — £30 per hour</strong>
 
-      <h3>Personal Assistant &amp; Errand Support — £30 per hour</h3>
-
-      <p>This may include:</p>
-
-      <ul>
-        <li>Errands</li>
-        <li>Shopping</li>
-        <li>Collections and drop-offs</li>
-        <li>Posting parcels</li>
-        <li>Appointment organisation</li>
-        <li>Practical personal assistant tasks</li>
-        <li>Other similar tasks agreed in advance</li>
-      </ul>
-
-      <p>
-        The examples above are illustrative and do not constitute an exhaustive list.
-      </p>
+        <ul>
+          <li>Errands</li>
+          <li>Shopping</li>
+          <li>Collections and drop-offs</li>
+          <li>Posting parcels</li>
+          <li>Appointment organisation</li>
+          <li>Practical personal assistant tasks</li>
+          <li>Other similar tasks agreed in advance</li>
+        </ul>
+      </div>
 
       <p>
-        Services are provided subject to availability and agreement between
-        Simply Supported and the customer.
+        The examples above are illustrative and are not an exhaustive list.
+        All services are subject to availability and agreement.
       </p>
 
 
       <h2>2. Enquiries and Bookings</h2>
 
       <p>
-        Customers can contact Simply Supported through the website, email
-        or another agreed communication method.
+        Customers can contact Ready &amp; Sorted through the website,
+        email or another agreed method.
       </p>
 
       <p>
-        Submitting an enquiry does not automatically create a booking or
-        guarantee that the requested service can be provided.
+        Sending an enquiry does not automatically create a booking.
       </p>
 
       <p>
-        Before work begins, Simply Supported will confirm, where applicable:
-      </p>
-
-      <ul>
-        <li>The service required</li>
-        <li>The agreed task or tasks</li>
-        <li>The date and time</li>
-        <li>The estimated or agreed number of hours</li>
-        <li>The applicable hourly rate or agreed price</li>
-        <li>Any other relevant arrangements</li>
-      </ul>
-
-      <p>
-        A booking is only confirmed once the details have been agreed by both parties.
+        Before work begins, Ready &amp; Sorted will confirm the relevant
+        service, task or tasks, date and time, estimated hours, price or
+        pricing basis, and any other arrangements that are relevant to
+        the booking.
       </p>
 
       <p>
-        Simply Supported reserves the right to decline a request where the
-        requested work is outside the services offered, unavailable, unsuitable
-        or outside the reasonable capabilities of the business.
+        A booking is confirmed once the customer has accepted the quote
+        and the required payment has been received.
+      </p>
+
+      <p>
+        Ready &amp; Sorted reserves the right to decline a request where
+        the requested work is outside the services offered, unavailable,
+        unsuitable, or beyond reasonable capabilities.
       </p>
 
 
       <h2>3. Prices and Payment</h2>
 
       <p>
-        The standard hourly rates are:
+        The standard rates are:
       </p>
 
-      <p class="rate">
-        General Admin: £20 per hour
-      </p>
-
-      <p class="rate">
-        Personal Assistant &amp; Errand Support: £30 per hour
-      </p>
+      <ul>
+        <li>General Admin — £20 per hour</li>
+        <li>Personal Assistant &amp; Errand Support — £30 per hour</li>
+      </ul>
 
       <p>
-        Unless otherwise agreed in writing, customers will be charged according
+        Unless otherwise agreed in writing, services are charged according
         to the time spent providing the agreed service.
       </p>
 
       <p>
-        Any additional costs that are reasonably necessary to complete an agreed
-        task, such as postage, delivery charges, parking or other agreed expenses,
-        will be discussed with the customer where reasonably practicable before
-        they are incurred.
+        Ready &amp; Sorted will provide the customer with a quote for the
+        requested service before work begins.
       </p>
 
       <p>
-        The customer will be responsible for paying any agreed additional expenses.
+        Payment is required in advance to confirm a booking, unless another
+        payment arrangement has been expressly agreed.
       </p>
 
       <p>
-        Simply Supported will confirm the applicable price or pricing basis before
-        work begins.
+        A booking will be confirmed once the customer has accepted the
+        quote and payment has been received.
       </p>
 
       <p>
-        Payment arrangements will be agreed with the customer before or at the
-        time the booking is confirmed.
+        Where a task reasonably requires additional agreed costs, such as
+        postage, delivery or parking, these costs will be discussed with
+        the customer where practicable and may be included in the quote
+        or charged separately as agreed.
       </p>
 
 
-      <h2>4. Scope of Services and Right to Decline Work</h2>
+      <h2>4. Scope of Work and Right to Decline</h2>
 
       <p>
-        Simply Supported will only accept work that falls within the services
-        offered and within the experience and reasonable capabilities of the business.
+        Ready &amp; Sorted will only accept work that falls within the
+        services offered, our experience and reasonable capabilities.
       </p>
 
       <p>
-        Simply Supported reserves the right to decline or withdraw from a requested
-        task where, in its reasonable judgement, the task:
+        We may decline or stop a task where it:
       </p>
 
       <ul>
-        <li>
-          Falls outside its skills, experience, capabilities or agreed scope of services;
-        </li>
-        <li>
-          Requires specialist qualifications, professional authorisation or regulated
-          advice that Simply Supported is not authorised or qualified to provide;
-        </li>
-        <li>
-          Would create an unreasonable health, safety or other risk;
-        </li>
-        <li>
-          Requires access to information, systems, property or equipment that cannot
-          reasonably be provided; or
-        </li>
-        <li>
-          Cannot reasonably be completed within the agreed arrangements.
-        </li>
+        <li>Falls outside the agreed service</li>
+        <li>Requires specialist professional qualifications or authorisation</li>
+        <li>Creates an unreasonable health, safety or security risk</li>
+        <li>Requires access to information, systems, property or equipment that is not available</li>
+        <li>Cannot reasonably be completed within the agreed arrangements</li>
+        <li>Would involve unlawful activity</li>
       </ul>
 
       <p>
-        Where possible, Simply Supported will inform the customer as soon as
-        reasonably practicable.
-      </p>
-
-      <p>
-        Where appropriate, the customer may be advised to seek assistance from
-        a suitably qualified professional.
+        Where appropriate, we may recommend that the customer seeks help
+        from a suitably qualified professional.
       </p>
 
 
       <h2>5. Customer Information and Instructions</h2>
 
       <p>
-        Customers are responsible for providing accurate and complete information
-        needed to carry out an agreed task.
+        Customers are responsible for providing accurate and sufficiently
+        clear information, instructions, deadlines and access arrangements
+        necessary for the agreed service.
       </p>
 
       <p>
-        Customers must provide clear instructions and tell Simply Supported about
-        any relevant restrictions, deadlines, access requirements or other
-        circumstances that could affect the work.
+        Customers must not ask Ready &amp; Sorted to carry out unlawful
+        activities or activities requiring qualifications or authorisation
+        that Ready &amp; Sorted does not hold.
       </p>
 
       <p>
-        Simply Supported will not knowingly undertake unlawful activities or
-        activities that require professional qualifications or authorisation
-        that it does not hold.
-      </p>
-
-      <p>
-        Where a task involves accessing an account, document, system or other
-        information belonging to the customer, the customer remains responsible
-        for ensuring that they have the appropriate authority to provide access.
+        Customers are responsible for ensuring that they have the right
+        to provide access to any property, account, document, system or
+        information required for the agreed task.
       </p>
 
 
       <h2>6. Personal Assistant and Errand Support</h2>
 
       <p>
-        For PA and errand services, the customer is responsible for providing
-        any necessary information, instructions, access arrangements and items
-        required to complete the agreed task.
+        For errands and practical PA tasks, customers are responsible for
+        providing the information and instructions reasonably required to
+        complete the task.
       </p>
 
       <p>
-        Where Simply Supported is asked to collect, deliver, purchase, post or
-        otherwise handle an item, the customer remains responsible for ensuring
-        that the item is lawful and suitable for the requested task.
+        Customers are responsible for ensuring that any items provided
+        for collection, delivery, posting or other handling are lawful,
+        suitable and safe.
       </p>
 
       <p>
-        Simply Supported will not knowingly transport, purchase, handle or
-        deliver prohibited, illegal or unsafe items.
+        Ready &amp; Sorted will not knowingly handle illegal, prohibited
+        or unsafe items.
       </p>
 
       <p>
-        Where a task involves spending the customer's money, the customer must
-        provide appropriate funds or agree an appropriate payment arrangement
-        in advance.
+        Where a task involves spending the customer's money, the customer
+        must provide the necessary funds or payment arrangement in advance.
       </p>
 
       <p>
-        Simply Supported is not responsible for delays caused by third parties,
-        traffic, transport providers, retailers, venues, postal services,
-        public services or other circumstances outside its reasonable control.
+        Ready &amp; Sorted is not responsible for delays caused by third
+        parties such as retailers, postal services, delivery providers,
+        appointment providers, traffic or public transport.
       </p>
 
 
       <h2>7. Confidentiality</h2>
 
       <p>
-        Simply Supported will treat information provided by customers as
-        confidential and will only use information where reasonably necessary
-        to provide the agreed service or meet legal or regulatory obligations.
+        Ready &amp; Sorted will treat information provided by customers as
+        confidential and will only use it as reasonably necessary to provide
+        the requested service, communicate with the customer, maintain
+        appropriate business records or comply with legal obligations.
       </p>
 
       <p>
-        Customers should not provide unnecessary sensitive or confidential information.
-      </p>
-
-      <p>
-        Where access to confidential information is necessary to complete an
-        agreed task, Simply Supported will take reasonable steps to handle that
-        information appropriately.
+        Customers should avoid providing unnecessary sensitive information.
       </p>
 
 
       <h2>8. Personal Information</h2>
 
       <p>
-        Simply Supported may collect and use personal information provided by
-        customers in order to:
-      </p>
-
-      <ul>
-        <li>Respond to enquiries</li>
-        <li>Arrange and provide services</li>
-        <li>Communicate with customers</li>
-        <li>Process payments</li>
-        <li>Maintain appropriate business records</li>
-        <li>Meet legal and regulatory obligations</li>
-      </ul>
-
-      <p>
-        Further information is provided in the Simply Supported Privacy Policy.
-      </p>
-
-
-      <h2>9. Third Parties</h2>
-
-      <p>
-        Some tasks may involve third parties, such as shops, delivery companies,
-        appointment providers, venues, postal services or other organisations.
+        Ready &amp; Sorted may collect and use personal information in
+        connection with enquiries, bookings, communication, payments,
+        record keeping and legal or regulatory obligations.
       </p>
 
       <p>
-        Simply Supported cannot guarantee the actions, availability, performance
-        or decisions of third parties.
+        Further information is provided in our
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+
+
+      <h2>9. Third-Party Services</h2>
+
+      <p>
+        Some tasks may involve third parties, including shops, retailers,
+        delivery services, postal services, appointment providers or venues.
       </p>
 
       <p>
-        Where a task depends on a third party, Simply Supported will take
-        reasonable steps to complete the agreed task but will not be responsible
-        for circumstances outside its reasonable control.
+        Ready &amp; Sorted cannot guarantee the actions, availability,
+        pricing, opening hours, delivery times or performance of third
+        parties.
+      </p>
+
+      <p>
+        We will take reasonable steps when carrying out an agreed task,
+        but matters outside our reasonable control remain the responsibility
+        of the relevant third party.
       </p>
 
 
       <h2>10. Delays and Circumstances Outside Our Control</h2>
 
       <p>
-        Simply Supported will make reasonable efforts to provide services at
-        the agreed time.
+        Ready &amp; Sorted will make reasonable efforts to provide services
+        at the agreed time.
       </p>
 
       <p>
-        However, circumstances outside our reasonable control may occasionally
-        cause delays, changes or cancellation.
-      </p>
-
-      <p>These circumstances may include, for example:</p>
-
-      <ul>
-        <li>Traffic or transport disruption</li>
-        <li>Severe weather</li>
-        <li>Illness or unexpected circumstances</li>
-        <li>Technology or communication failures</li>
-        <li>Third-party delays</li>
-        <li>Business or service closures</li>
-        <li>Other events outside our reasonable control</li>
-      </ul>
-
-      <p>
-        Where reasonably practicable, Simply Supported will inform the customer
-        of any significant delay or change as soon as possible.
-      </p>
-
-
-      <h2>11. Our Responsibility</h2>
-
-      <p>
-        Simply Supported will provide services with reasonable care and skill.
+        Delays may occur because of circumstances outside our reasonable
+        control, including severe weather, traffic, illness, technology
+        problems, third-party delays, closures or transport disruption.
       </p>
 
       <p>
-        Nothing in these Terms &amp; Conditions is intended to exclude or restrict
-        any liability or consumer right that cannot legally be excluded or restricted.
+        Where reasonably practicable, we will inform the customer of any
+        significant delay or change.
+      </p>
+
+
+      <h2>11. Responsibility and Liability</h2>
+
+      <p>
+        Ready &amp; Sorted will provide services with reasonable care and skill.
       </p>
 
       <p>
-        Simply Supported will not be responsible for loss or damage caused by
-        inaccurate, incomplete or misleading information supplied by the customer,
-        or by circumstances outside Simply Supported's reasonable control.
+        Nothing in these Terms &amp; Conditions excludes or limits any
+        liability or consumer right that cannot lawfully be excluded or
+        limited.
       </p>
 
       <p>
-        Customers remain responsible for decisions made using information or
-        work supplied by Simply Supported.
+        Ready &amp; Sorted is not responsible for problems caused by
+        inaccurate, incomplete or late information supplied by the customer,
+        or by circumstances outside our reasonable control.
       </p>
 
       <p>
-        Where a task requires professional, regulated or specialist advice,
-        the customer should obtain advice from an appropriately qualified professional.
+        Customers remain responsible for decisions they make based on
+        information, documents or administrative support provided by
+        Ready &amp; Sorted.
+      </p>
+
+      <p>
+        Ready &amp; Sorted does not provide specialist legal, financial,
+        medical or other regulated professional advice.
       </p>
 
 
       <h2>12. Customer Property and Equipment</h2>
 
       <p>
-        Where Simply Supported is asked to handle, collect, deliver or work with
-        a customer's property, the customer confirms that they have the right
-        to provide that property for the agreed purpose.
+        Where Ready &amp; Sorted handles customer property, the customer
+        confirms that they have the right to provide the property for
+        the agreed purpose.
       </p>
 
       <p>
-        Customers should not provide items that are illegal, unsafe or unsuitable
-        for the requested task.
+        Customers must not provide illegal, unsafe or prohibited items.
       </p>
 
       <p>
-        Simply Supported will take reasonable care of customer property while it
-        is in its possession as part of an agreed task.
+        Ready &amp; Sorted will take reasonable care when handling customer
+        property within the scope of the agreed service.
       </p>
 
 
       <h2>13. Cancellation and Changes</h2>
 
       <p>
-        Customers should provide as much notice as reasonably possible if they
-        need to cancel or change a booking.
+        Customers should provide as much notice as reasonably possible if
+        they need to cancel or change a booking.
       </p>
 
       <p>
-        Simply Supported will aim to accommodate reasonable changes where
-        availability allows.
+        Requests to change a booking will be accommodated where reasonably
+        possible and subject to availability.
       </p>
 
       <p>
-        Where a customer cancels at short notice, any charge will be based only
-        on amounts that are reasonably due under the agreed booking and applicable law.
+        Where a booking is cancelled, any refund will be handled in
+        accordance with the agreed booking terms and applicable consumer
+        law.
       </p>
 
       <p>
-        Simply Supported will not impose an unfair or disproportionate cancellation charge.
+        Where a customer has a statutory cancellation right, nothing in
+        these Terms &amp; Conditions is intended to remove that right.
       </p>
 
       <p>
-        Where a customer has a statutory right to cancel, that right will apply
-        regardless of these Terms &amp; Conditions.
-      </p>
-
-      <p>
-        For services agreed online or by another distance method, applicable
-        statutory cancellation rights will be respected.
-      </p>
-
-      <p>
-        If a customer specifically asks Simply Supported to begin providing a
-        service during any applicable cancellation period, the customer may be
-        required to expressly request this and may have to pay for services
-        already provided where the law permits.
+        If a customer asks Ready &amp; Sorted to begin providing a service
+        during an applicable cancellation period, the customer may be asked
+        to expressly request that the service begins during that period.
+        Where permitted by law, the customer may be required to pay for
+        services already supplied before cancellation.
       </p>
 
 
       <h2>14. Complaints</h2>
 
       <p>
-        Simply Supported aims to provide a professional and reliable service.
+        If a customer is unhappy with a service, they should contact
+        Ready &amp; Sorted as soon as reasonably possible and explain the
+        issue.
       </p>
 
       <p>
-        If a customer is unhappy with a service, they should contact Simply
-        Supported as soon as reasonably possible and explain the issue.
+        We will consider complaints fairly and seek to reach a reasonable
+        resolution where appropriate.
       </p>
 
       <p>
-        Simply Supported will consider the complaint fairly and will try to
-        resolve the matter reasonably.
-      </p>
-
-      <p>
-        Nothing in this complaints procedure affects any statutory rights
-        the customer may have.
+        Nothing in this section affects any statutory rights the customer
+        may have.
       </p>
 
 
       <h2>15. Changes to These Terms</h2>
 
       <p>
-        Simply Supported may update these Terms &amp; Conditions from time to time
-        to reflect changes to the business, services or applicable requirements.
+        Ready &amp; Sorted may update these Terms &amp; Conditions from time
+        to time.
       </p>
 
       <p>
-        The version applicable to a particular booking will normally be the
-        version in effect when the booking is confirmed, unless a change is
-        required by law.
-      </p>
-
-      <p>
-        The latest version will be made available on the Simply Supported website.
+        The version in effect at the time a booking is agreed will normally
+        apply to that booking, unless a change is required by law.
       </p>
 
 
       <h2>16. Governing Law</h2>
 
       <p>
-        These Terms &amp; Conditions are governed by the law of England and Wales.
-      </p>
-
-      <p>
-        Any disputes will be dealt with by the courts of England and Wales,
-        subject to any mandatory consumer rights or protections that apply.
+        These Terms &amp; Conditions are governed by the laws of England and
+        Wales, subject to any mandatory consumer rights that apply.
       </p>
 
 
       <h2>17. Contact</h2>
 
       <p>
-        For enquiries about these Terms &amp; Conditions or Simply Supported's
-        services, please contact:
+        If you have any questions about these Terms &amp; Conditions,
+        please contact Ready &amp; Sorted:
       </p>
 
       <p>
-        <strong>Simply Supported</strong><br>
-        Email:
-        <a href="mailto:simplysupported@protonmail.com">
-          simplysupported@protonmail.com
+        <strong>Email:</strong>
+        <a href="mailto:readyandsupported@proton.me">
+          readyandsupported@proton.me
         </a>
       </p>
 
 
+      <a href="index.html" class="back">
+        ← Back to Ready &amp; Sorted
+      </a>
+
     </div>
-
-  </div>
-
-</main>
+  </main>
 
 
-<footer>
+  <footer>
+    <div class="container footer-content">
 
-  <div class="wrap footer-inner">
+      <div>
+        <div class="footer-brand">Ready &amp; Sorted</div>
 
-    <p>
-      © 2026 Simply Supported
-    </p>
+        <div class="footer-text">
+          Flexible admin &amp; PA support
+        </div>
+      </div>
 
-    <p>
-      Flexible admin &amp; PA support
-    </p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:readyandsupported@proton.me">Email me</a>
+      </div>
 
-  </div>
-
-</footer>
+    </div>
+  </footer>
 
 </body>
 </html>
