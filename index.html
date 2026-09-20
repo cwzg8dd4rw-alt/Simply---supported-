@@ -386,6 +386,24 @@
       margin-top: 12px;
     }
 
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    .thank-you h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      color: #4b4240;
+      margin-bottom: 12px;
+    }
+
+    .thank-you p {
+      color: #716764;
+      margin-bottom: 8px;
+    }
+
     footer {
       background: #4b4240;
       color: #f9f2ef;
@@ -694,13 +712,10 @@
             availability and provide a quote.
           </p>
 
-          <form
-            action="mailto:readyandsupported@proton.me"
-            method="post"
-            enctype="text/plain"
-          >
+          <form id="bookingForm">
 
             <label for="name">Name</label>
+
             <input
               type="text"
               id="name"
@@ -709,6 +724,7 @@
             >
 
             <label for="email">Email</label>
+
             <input
               type="email"
               id="email"
@@ -717,21 +733,25 @@
             >
 
             <label for="service">Service</label>
+
             <select
               id="service"
               name="Service"
               required
             >
               <option value="">Please select</option>
+
               <option value="General Admin - £20 per hour">
                 General Admin — £20/hour
               </option>
+
               <option value="Personal Assistant & Errand Support - £30 per hour">
                 Personal Assistant &amp; Errand Support — £30/hour
               </option>
             </select>
 
             <label for="date">Preferred date</label>
+
             <input
               type="date"
               id="date"
@@ -739,6 +759,7 @@
             >
 
             <label for="hours">Approx. hours</label>
+
             <input
               type="text"
               id="hours"
@@ -747,6 +768,7 @@
             >
 
             <label for="message">What do you need help with?</label>
+
             <textarea
               id="message"
               name="What do you need help with"
@@ -768,6 +790,24 @@
 
           </form>
 
+
+          <div id="thankYouMessage" class="thank-you">
+
+            <div class="eyebrow">Enquiry sent</div>
+
+            <h3>Thank you for your enquiry!</h3>
+
+            <p>
+              Your enquiry has been sent successfully.
+            </p>
+
+            <p>
+              I’ll aim to respond within 48 hours to confirm availability
+              and discuss your request.
+            </p>
+
+          </div>
+
         </div>
       </div>
     </section>
@@ -788,20 +828,44 @@
 
       <div class="footer-links">
         <a href="terms.html">Terms &amp; Conditions</a>
+
         <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:readyandsupported@proton.me">Email me</a>
+
+        <a href="mailto:readyandsupported@proton.me">
+          Email me
+        </a>
       </div>
 
     </div>
   </footer>
-<script>
-  document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();
 
-    const form = event.target;
 
-    const body =
-      "Name=" + form.querySelector("#name").value + "\n" +
-      "Email=" + form.querySelector("#email
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const form = event.target;
+
+      const body =
+        "Name=" + form.querySelector("#name").value + "\n" +
+        "Email=" + form.querySelector("#email").value + "\n" +
+        "Service=" + form.querySelector("#service").value + "\n" +
+        "Preferred date=" + form.querySelector("#date").value + "\n" +
+        "Approximate hours=" + form.querySelector("#hours").value + "\n" +
+        "What do you need help with=" + form.querySelector("#message").value;
+
+      const mailto =
+        "mailto:readyandsupported@proton.me" +
+        "?subject=" + encodeURIComponent("New Ready & Sorted enquiry") +
+        "&body=" + encodeURIComponent(body);
+
+      form.style.display = "none";
+
+      document.getElementById("thankYouMessage").style.display = "block";
+
+      window.location.href = mailto;
+    });
+  </script>
+
 </body>
 </html>
