@@ -1,500 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Privacy Policy | Simply Supported</title>
+  <title>Privacy Policy | Ready & Sorted</title>
 
-<meta name="description" content="Privacy Policy for Simply Supported admin and personal assistant services.">
+  <meta name="description" content="Privacy Policy for Ready & Sorted admin and personal assistant support services.">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-:root{
-  --cream:#fbf8f4;
-  --white:#ffffff;
-  --ink:#29282e;
-  --muted:#686875;
-  --rose:#b97d88;
-  --border:#e4ddd8;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7f5;
+      color: #3f3938;
+      line-height: 1.7;
+    }
 
-*{
-  box-sizing:border-box;
-}
+    a {
+      color: #9b6f69;
+    }
 
-html{
-  scroll-behavior:smooth;
-}
+    .container {
+      width: 90%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
 
-body{
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:'DM Sans',Arial,sans-serif;
-  line-height:1.7;
-}
+    header {
+      background: #f7eee9;
+      padding: 30px 0;
+      border-bottom: 1px solid #eadbd4;
+    }
 
-a{
-  color:var(--rose);
-}
+    .brand {
+      text-decoration: none;
+      display: inline-block;
+    }
 
-.wrap{
-  width:min(900px,92%);
-  margin:auto;
-}
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: #554a48;
+    }
 
-header{
-  background:var(--cream);
-  border-bottom:1px solid var(--border);
-}
+    .brand-subtitle {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #9b7770;
+      margin-top: 2px;
+    }
 
-.nav{
-  min-height:100px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
+    main {
+      padding: 55px 0 70px;
+    }
 
-.brand{
-  text-decoration:none;
-  color:var(--ink);
-}
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: #4b4240;
+      margin-bottom: 8px;
+    }
 
-.brand strong{
-  display:block;
-  font-family:'Playfair Display',serif;
-  font-size:34px;
-  line-height:1;
-}
+    .updated {
+      color: #817572;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
 
-.brand span{
-  display:block;
-  margin-top:8px;
-  color:var(--rose);
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:3px;
-}
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #554a48;
+      margin-top: 38px;
+      margin-bottom: 12px;
+    }
 
-.back{
-  text-decoration:none;
-  font-weight:700;
-}
+    p {
+      margin-bottom: 15px;
+    }
 
-main{
-  padding:75px 0;
-}
+    ul {
+      margin: 10px 0 18px 22px;
+    }
 
-.eyebrow{
-  color:var(--rose);
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:3px;
-  text-transform:uppercase;
-}
+    li {
+      margin-bottom: 7px;
+    }
 
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(45px,7vw,70px);
-  line-height:1.05;
-  margin:15px 0 10px;
-}
+    .info-box {
+      background: #f7eee9;
+      border: 1px solid #eadbd4;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+    }
 
-.updated{
-  color:var(--muted);
-  margin-bottom:55px;
-}
+    .back {
+      display: inline-block;
+      margin-top: 40px;
+      background: #b98282;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 14px;
+    }
 
-.content{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:30px;
-  padding:45px;
-}
+    footer {
+      background: #4b4240;
+      color: #f9f2ef;
+      padding: 30px 0;
+    }
 
-h2{
-  font-family:'Playfair Display',serif;
-  font-size:30px;
-  line-height:1.2;
-  margin:38px 0 15px;
-}
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
 
-h2:first-child{
-  margin-top:0;
-}
+    .footer-brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
 
-p{
-  margin:0 0 18px;
-}
+    .footer-text {
+      font-size: 13px;
+      color: #ddd0cc;
+      margin-top: 3px;
+    }
 
-ul{
-  margin:0 0 22px;
-  padding-left:25px;
-}
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-li{
-  margin-bottom:8px;
-}
+    .footer-links a {
+      color: #f9f2ef;
+      font-size: 13px;
+      text-decoration: none;
+    }
 
-footer{
-  background:white;
-  border-top:1px solid var(--border);
-  padding:45px 0;
-}
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
 
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  flex-wrap:wrap;
-}
+      h2 {
+        font-size: 23px;
+      }
 
-footer p{
-  color:var(--muted);
-  margin:0;
-}
-
-@media(max-width:700px){
-
-  .nav{
-    min-height:85px;
-  }
-
-  .brand strong{
-    font-size:28px;
-  }
-
-  .brand span{
-    font-size:10px;
-    letter-spacing:2px;
-  }
-
-  .back{
-    font-size:14px;
-  }
-
-  main{
-    padding:55px 0;
-  }
-
-  .content{
-    padding:28px;
-    border-radius:24px;
-  }
-
-  h1{
-    font-size:48px;
-  }
-
-  h2{
-    font-size:27px;
-  }
-}
-</style>
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
+    <div class="container">
 
-  <div class="wrap nav">
+      <a href="index.html" class="brand">
+        <div class="brand-name">Ready &amp; Sorted</div>
+        <div class="brand-subtitle">ADMIN • PA SUPPORT</div>
+      </a>
 
-    <a href="index.html" class="brand">
-      <strong>Simply Supported</strong>
-      <span>ADMIN • PA SUPPORT</span>
-    </a>
-
-    <a href="index.html" class="back">
-      ← Back to website
-    </a>
-
-  </div>
-
-</header>
+    </div>
+  </header>
 
 
-<main>
+  <main>
+    <div class="container">
 
-  <div class="wrap">
+      <h1>Privacy Policy</h1>
 
-    <div class="eyebrow">Simply Supported</div>
+      <div class="updated">
+        Last updated: September 2026
+      </div>
 
-    <h1>Privacy Policy</h1>
-
-    <p class="updated">
-      Last updated: September 2026
-    </p>
-
-
-    <div class="content">
-
-
-      <h2>1. About This Privacy Policy</h2>
 
       <p>
-        Simply Supported respects your privacy and is committed to protecting
-        your personal information.
-      </p>
-
-      <p>
-        This Privacy Policy explains how Simply Supported collects, uses,
-        stores and protects personal information when you visit our website
-        or contact us about our services.
+        Ready &amp; Sorted respects your privacy. This Privacy Policy
+        explains how personal information may be collected, used and
+        protected when you use this website or contact Ready &amp; Sorted
+        about its services.
       </p>
 
 
-      <h2>2. Information We Collect</h2>
+      <h2>1. About Ready &amp; Sorted</h2>
 
       <p>
-        When you submit an enquiry or booking request, we may collect:
+        Ready &amp; Sorted provides flexible administrative and personal
+        assistant support to individuals and small businesses.
+      </p>
+
+      <p>
+        For the purposes of applicable data protection legislation,
+        Ready &amp; Sorted is responsible for the personal information
+        collected and used in connection with its services.
+      </p>
+
+
+      <h2>2. Information We May Collect</h2>
+
+      <p>
+        When you contact Ready &amp; Sorted or submit an enquiry through
+        this website, we may collect information such as:
       </p>
 
       <ul>
         <li>Your name</li>
         <li>Your email address</li>
-        <li>Your preferred service</li>
-        <li>Your preferred date and time</li>
-        <li>The approximate number of hours required</li>
-        <li>Information you provide about your requirements</li>
-        <li>Any other information you choose to include in your enquiry</li>
+        <li>The service you are interested in</li>
+        <li>Your preferred date or timing</li>
+        <li>Approximate hours requested</li>
+        <li>Details about the task you need help with</li>
+        <li>Other information you choose to provide</li>
       </ul>
 
       <p>
-        We may also receive basic technical information about visitors to
-        our website, such as browser or device information, where this is
-        provided automatically by our website hosting or security services.
+        We may also receive basic technical information associated with
+        operating, securing and maintaining the website.
       </p>
 
 
-      <h2>3. How We Use Your Information</h2>
+      <h2>3. How We Use Personal Information</h2>
 
       <p>
-        We may use your information to:
+        Personal information may be used to:
       </p>
 
       <ul>
-        <li>Respond to enquiries and booking requests</li>
-        <li>Check availability and arrange services</li>
-        <li>Communicate with you about your requested service</li>
-        <li>Provide and manage services you have requested</li>
-        <li>Keep appropriate business records</li>
-        <li>Handle complaints or queries</li>
-        <li>Protect our website and business from misuse or fraud</li>
-        <li>Comply with legal and regulatory obligations</li>
+        <li>Respond to enquiries</li>
+        <li>Discuss your requirements</li>
+        <li>Check availability</li>
+        <li>Provide quotes</li>
+        <li>Arrange and provide agreed services</li>
+        <li>Communicate about bookings</li>
+        <li>Maintain appropriate business records</li>
+        <li>Deal with complaints or queries</li>
+        <li>Protect the website and business against misuse or fraud</li>
+        <li>Meet legal, regulatory, accounting or tax obligations</li>
       </ul>
 
 
-      <h2>4. How We Contact You</h2>
+      <h2>4. Email and Communications</h2>
 
       <p>
-        If you contact Simply Supported, we may use the email address you
-        provide to respond to your enquiry or communicate with you about
-        services you have requested.
+        If you contact Ready &amp; Sorted by email or through the website,
+        your information may be used to respond to your enquiry and
+        communicate with you about a requested service or booking.
       </p>
 
       <p>
-        We will not use your personal information for unrelated marketing
-        purposes unless we have a lawful basis to do so and, where required,
-        you have given your consent.
-      </p>
-
-
-      <h2>5. Sharing Your Information</h2>
-
-      <p>
-        We do not sell your personal information.
+        Ready &amp; Sorted does not currently send unrelated marketing
+        emails to customers simply because they have made an enquiry.
       </p>
 
       <p>
-        We may share information where this is necessary to operate our
-        business or provide our services.
-      </p>
-
-      <p>
-        For example, website hosting, email or technology providers may
-        process information on our behalf. We may also disclose information
-        where required by law, regulation, court order or where necessary
-        to protect our legal rights.
-      </p>
-
-      <p>
-        Where we communicate with suppliers, retailers, delivery companies,
-        appointment providers or other third parties on your behalf as part
-        of an agreed service, we may share relevant information where
-        necessary to provide that service.
+        If marketing communications are introduced in the future, they
+        will be handled in accordance with applicable data protection
+        and electronic marketing laws.
       </p>
 
 
-      <h2>6. How Long We Keep Your Information</h2>
+      <h2>5. Sharing Personal Information</h2>
 
       <p>
-        We keep personal information only for as long as reasonably necessary
-        for the purposes for which it was collected.
+        Ready &amp; Sorted does not sell your personal information.
       </p>
 
       <p>
-        Where information forms part of our business or financial records,
-        we may need to retain it for longer periods to meet legal, accounting
-        or tax requirements.
-      </p>
-
-
-      <h2>7. Security</h2>
-
-      <p>
-        We take reasonable steps to protect personal information against
-        accidental loss, unauthorised access, alteration or disclosure.
+        Personal information may be shared where reasonably necessary to
+        operate the business, provide an agreed service or comply with
+        legal obligations.
       </p>
 
       <p>
-        However, no website or method of electronic transmission can be
-        guaranteed to be completely secure.
-      </p>
-
-
-      <h2>8. Your Rights</h2>
-
-      <p>
-        Depending on the circumstances, UK data protection law gives you
-        rights including:
+        This may include appropriate service providers such as:
       </p>
 
       <ul>
-        <li>
-          The right to ask for access to personal information we hold about you
-        </li>
-
-        <li>
-          The right to ask for inaccurate information to be corrected
-        </li>
-
-        <li>
-          The right to ask for your information to be deleted where applicable
-        </li>
-
-        <li>
-          The right to ask us to stop or restrict certain uses of your
-          information in certain circumstances
-        </li>
-
-        <li>
-          The right to object to certain uses of your information
-        </li>
-
-        <li>
-          The right to data portability in certain circumstances
-        </li>
+        <li>Website hosting providers</li>
+        <li>Email providers</li>
+        <li>Payment providers</li>
+        <li>Technology or security providers</li>
+        <li>Accountants or professional advisers where appropriate</li>
       </ul>
 
       <p>
-        You may also have the right to complain to the Information
-        Commissioner's Office (ICO) if you believe your personal information
-        has been handled unlawfully.
+        Where an agreed PA or errand task requires dealing with a retailer,
+        delivery provider, appointment provider, venue or similar third
+        party, relevant information may be provided where reasonably
+        necessary to complete the task.
       </p>
 
       <p>
-        Information about the ICO can be found at
-        <a href="https://ico.org.uk/" target="_blank" rel="noopener">
-          ico.org.uk.
-        </a>
+        Information may also be disclosed where required by law or by a
+        competent authority.
       </p>
 
 
-      <h2>9. Cookies</h2>
+      <h2>6. Legal Basis for Processing</h2>
 
       <p>
-        Our website may use essential technologies required for the website
-        to operate correctly.
+        Depending on the circumstances, Ready &amp; Sorted may process
+        personal information where it is necessary to:
       </p>
 
-      <p>
-        We do not currently use cookies for targeted advertising. If this
-        changes in the future, this Privacy Policy will be updated where
-        appropriate.
-      </p>
-
-
-      <h2>10. Third-Party Services</h2>
-
-      <p>
-        Our website and business may use third-party services such as website
-        hosting, email services and payment providers.
-      </p>
-
-      <p>
-        These providers may process personal information on our behalf.
-        Where appropriate, we will review the privacy information provided
-        by those services.
-      </p>
-
-
-      <h2>11. Children's Information</h2>
-
-      <p>
-        Our services are intended for individuals and small businesses
-        seeking general administrative or personal assistant and errand
-        support.
-      </p>
-
-      <p>
-        We do not knowingly collect personal information from children for
-        the purpose of providing our services.
-      </p>
-
-
-      <h2>12. Changes to This Privacy Policy</h2>
-
-      <p>
-        We may update this Privacy Policy from time to time to reflect
-        changes to our services, technology or legal requirements.
-      </p>
-
-      <p>
-        The latest version will always be published on this website.
-      </p>
-
-
-      <h2>13. Contact Us</h2>
-
-      <p>
-        If you have a question about this Privacy Policy or would like to
-        exercise a data protection right, please contact:
-      </p>
-
-      <p>
-        <strong>Simply Supported</strong><br>
-        Email:
-        <a href="mailto:simplysupported@protonmail.com">
-          simplysupported@protonmail.com
-        </a>
-      </p>
-
-
-    </div>
-
-  </div>
-
-</main>
-
-
-<footer>
-
-  <div class="wrap footer-inner">
-
-    <p>
-      © 2026 Simply Supported
-    </p>
-
-    <p>
-      Flexible admin &amp; PA support
-    </p>
-
-  </div>
-
-</footer>
-
-</body>
-</html>
+      <ul>
+        <li>Take steps at your request before entering into a service arrangement</li>
+        <li>Perform an agreed contract or provide requested services</li>
+        <li>Comply with a legal obligation</li>
+       
