@@ -1,915 +1,799 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Simply Supported | Admin & PA Support</title>
-
-<meta name="description" content="Simply Supported provides flexible general admin and personal assistant support for individuals and small businesses.">
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-
-:root{
-  --cream:#fbf8f4;
-  --white:#ffffff;
-  --ink:#29282e;
-  --muted:#686875;
-  --rose:#b97d88;
-  --rose-light:#f5e9ea;
-  --border:#e4ddd8;
-  --dark:#29282e;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:'DM Sans',Arial,sans-serif;
-  line-height:1.7;
-}
-
-a{
-  color:inherit;
-}
-
-.wrap{
-  width:min(1120px,92%);
-  margin:auto;
-}
-
-header{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:rgba(251,248,244,.96);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(10px);
-}
-
-.nav{
-  min-height:96px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.brand{
-  text-decoration:none;
-  display:block;
-}
-
-.brand strong{
-  display:block;
-  font-family:'Playfair Display',serif;
-  font-size:38px;
-  line-height:1;
-}
-
-.brand span{
-  display:block;
-  margin-top:8px;
-  color:var(--rose);
-  font-size:14px;
-  font-weight:700;
-  letter-spacing:3px;
-}
-
-.nav-btn{
-  text-decoration:none;
-  background:var(--rose);
-  color:white;
-  padding:16px 26px;
-  border-radius:40px;
-  font-weight:700;
-  white-space:nowrap;
-}
-
-section{
-  padding:90px 0;
-}
-
-.hero{
-  padding:100px 0 80px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:55px;
-  align-items:center;
-}
-
-.eyebrow{
-  color:var(--rose);
-  font-size:14px;
-  font-weight:700;
-  letter-spacing:4px;
-  text-transform:uppercase;
-}
-
-h1,h2{
-  font-family:'Playfair Display',serif;
-  font-weight:600;
-  line-height:1.02;
-  margin:18px 0 25px;
-}
-
-h1{
-  font-size:clamp(54px,8vw,92px);
-}
-
-h2{
-  font-size:clamp(44px,6vw,70px);
-}
-
-h3{
-  font-size:28px;
-  line-height:1.2;
-  margin:18px 0;
-}
-
-.hero p{
-  color:var(--muted);
-  font-size:22px;
-  max-width:680px;
-}
-
-.buttons{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-  margin-top:32px;
-}
-
-.btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:17px 30px;
-  border-radius:40px;
-  font-weight:700;
-  border:1px solid var(--ink);
-}
-
-.btn.primary{
-  background:var(--rose);
-  border-color:var(--rose);
-  color:white;
-}
-
-.hero-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:35px;
-  padding:45px;
-}
-
-.hero-card .big{
-  color:var(--rose);
-  font-family:'Playfair Display',serif;
-  font-size:64px;
-  line-height:1;
-  margin-bottom:25px;
-}
-
-.hero-card p{
-  font-size:18px;
-  margin:0 0 25px;
-}
-
-.hero-card strong{
-  font-size:20px;
-}
-
-.section-intro{
-  max-width:760px;
-  margin-bottom:45px;
-}
-
-.section-intro p{
-  color:var(--muted);
-  font-size:19px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
-}
-
-.card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:30px;
-  padding:42px;
-}
-
-.icon{
-  font-size:42px;
-  margin-bottom:25px;
-}
-
-.card p{
-  color:var(--muted);
-  font-size:18px;
-}
-
-.price{
-  color:var(--rose);
-  font-size:25px;
-  font-weight:700;
-  margin-top:25px;
-}
-
-.about{
-  background:white;
-}
-
-.about-inner{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-.about-inner p{
-  color:var(--muted);
-  font-size:21px;
-}
-
-.steps{
-  background:var(--rose-light);
-}
-
-.step-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.step{
-  background:white;
-  border-radius:30px;
-  padding:38px;
-}
-
-.step-number{
-  color:var(--rose);
-  font-size:25px;
-  font-weight:700;
-}
-
-.step h3{
-  font-size:25px;
-}
-
-.step p{
-  color:var(--muted);
-  font-size:17px;
-}
-
-.booking{
-  background:var(--rose-light);
-}
-
-.booking-intro{
-  max-width:800px;
-  margin-bottom:45px;
-}
-
-.booking-intro p{
-  color:var(--muted);
-  font-size:20px;
-}
-
-.form-card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:35px;
-  padding:50px;
-  max-width:900px;
-  margin:auto;
-}
-
-label{
-  display:block;
-  font-weight:700;
-  font-size:18px;
-  margin:0 0 10px;
-}
-
-.field{
-  margin-bottom:25px;
-}
-
-input,
-select,
-textarea{
-  width:100%;
-  padding:18px;
-  border:2px solid var(--border);
-  border-radius:18px;
-  background:white;
-  color:var(--ink);
-  font:inherit;
-  font-size:17px;
-}
-
-textarea{
-  min-height:180px;
-  resize:vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-  outline:none;
-  border-color:var(--rose);
-}
-
-.submit{
-  width:100%;
-  border:0;
-  background:var(--rose);
-  color:white;
-  padding:19px;
-  border-radius:40px;
-  font:inherit;
-  font-size:20px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.form-note{
-  color:var(--muted);
-  margin-top:25px;
-  font-size:16px;
-}
-
-footer{
-  background:white;
-  border-top:1px solid var(--border);
-  padding:65px 0;
-}
-
-.footer-grid{
-  display:flex;
-  justify-content:space-between;
-  gap:40px;
-  flex-wrap:wrap;
-}
-
-.footer-brand strong{
-  display:block;
-  font-size:28px;
-}
-
-.footer-brand p{
-  color:var(--muted);
-}
-
-.footer-links{
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-
-.footer-links a{
-  color:var(--muted);
-  text-decoration:none;
-}
-
-.footer-links a:hover{
-  color:var(--rose);
-}
-
-@media(max-width:800px){
-
-  .nav{
-    min-height:85px;
-  }
-
-  .brand strong{
-    font-size:31px;
-  }
-
-  .brand span{
-    font-size:11px;
-    letter-spacing:2.5px;
-  }
-
-  .nav-btn{
-    padding:13px 18px;
-    font-size:14px;
-  }
-
-  section{
-    padding:70px 0;
-  }
-
-  .hero{
-    padding:70px 0;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  h1{
-    font-size:55px;
-  }
-
-  h2{
-    font-size:48px;
-  }
-
-  .hero p{
-    font-size:19px;
-  }
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .step-grid{
-    grid-template-columns:1fr;
-  }
-
-  .card,
-  .hero-card,
-  .step,
-  .form-card{
-    padding:32px;
-  }
-
-  .footer-grid{
-    flex-direction:column;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ready & Sorted | Admin & PA Support</title>
+
+  <meta name="description" content="Flexible admin and personal assistant support across Hertfordshire. General admin, errands, shopping, collections, document preparation, scheduling and practical PA support.">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7f5;
+      color: #3f3938;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: #f7eee9;
+      padding: 24px 0;
+      border-bottom: 1px solid #eadbd4;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: #554a48;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #9b7770;
+      margin-top: 2px;
+    }
+
+    .nav-button {
+      text-decoration: none;
+      background: #b98282;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f8eee9 0%, #fffaf8 100%);
+      padding: 75px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #a16f69;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 1.05;
+      font-weight: 500;
+      color: #463d3b;
+      margin-bottom: 22px;
+    }
+
+    .hero-text {
+      font-size: 18px;
+      color: #665d5a;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .button-primary {
+      background: #b98282;
+      color: white;
+    }
+
+    .button-secondary {
+      border: 1px solid #c9aaa4;
+      color: #795e59;
+      background: #fffaf8;
+    }
+
+    .flex-card {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid #eadbd4;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 12px 35px rgba(100, 75, 65, 0.07);
+    }
+
+    .flex-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      color: #554a48;
+      margin-bottom: 10px;
+    }
+
+    .flex-card p {
+      color: #716764;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      color: #a36f6b;
+      margin-bottom: 6px;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #817572;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 40px;
+      font-weight: 500;
+      color: #4b4240;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: #716764;
+    }
+
+    .services {
+      background: #fffdfc;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: #faf5f2;
+      border: 1px solid #eadbd4;
+      border-radius: 22px;
+      padding: 32px;
+    }
+
+    .service-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 500;
+      color: #554a48;
+      margin-bottom: 5px;
+    }
+
+    .service-price {
+      color: #a36f6b;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .service-card p {
+      color: #716764;
+      margin-bottom: 16px;
+    }
+
+    .service-card ul {
+      padding-left: 20px;
+      color: #665d5a;
+    }
+
+    .service-card li {
+      margin-bottom: 7px;
+    }
+
+    .how {
+      background: #f7eee9;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #b98282;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 17px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+    }
+
+    .step h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      color: #554a48;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: #716764;
+    }
+
+    .why {
+      background: #fffdfc;
+    }
+
+    .why-box {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .why-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 39px;
+      font-weight: 500;
+      color: #4b4240;
+      margin-bottom: 15px;
+    }
+
+    .why-box p {
+      color: #716764;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .booking {
+      background: #f7eee9;
+    }
+
+    .booking-box {
+      max-width: 720px;
+      margin: 0 auto;
+      background: white;
+      padding: 38px;
+      border-radius: 24px;
+      border: 1px solid #eadbd4;
+      box-shadow: 0 12px 35px rgba(100, 75, 65, 0.06);
+    }
+
+    .booking-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      font-weight: 500;
+      text-align: center;
+      color: #4b4240;
+      margin-bottom: 10px;
+    }
+
+    .booking-intro {
+      text-align: center;
+      color: #716764;
+      margin-bottom: 30px;
+    }
+
+    form label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #554a48;
+      margin-bottom: 7px;
+      margin-top: 17px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      border: 1px solid #d9c8c2;
+      border-radius: 10px;
+      padding: 13px 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: #443d3b;
+      background: #fffdfc;
+    }
+
+    form input:focus,
+    form select:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #b98282;
+    }
+
+    form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      border: none;
+      background: #b98282;
+      color: white;
+      padding: 14px;
+      border-radius: 28px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 25px;
+      cursor: pointer;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 12px;
+      color: #857975;
+      margin-top: 12px;
+    }
+
+    footer {
+      background: #4b4240;
+      color: #f9f2ef;
+      padding: 35px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: #ddd0cc;
+      margin-top: 3px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #f9f2ef;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .service-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .nav-button {
+        display: none;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .brand-name {
+        font-size: 25px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .flex-card,
+      .service-card,
+      .booking-box {
+        padding: 25px;
+      }
+
+      .section-heading h2,
+      .why-box h2,
+      .booking-box h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="wrap nav">
-
-    <a href="#" class="brand">
-      <strong>Simply Supported</strong>
-      <span>ADMIN • PA SUPPORT</span>
-    </a>
-
-    <a href="#book" class="nav-btn">Book support</a>
-
-  </div>
-</header>
-
-
-<main>
-
-<section class="hero">
-
-  <div class="wrap hero-grid">
-
-    <div>
-
-      <div class="eyebrow">Practical support, made simple</div>
-
-      <h1>Extra hands, exactly when you need them.</h1>
-
-      <p>
-        Flexible admin and personal assistant support without the
-        commitment of taking on another full-time employee.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#book" class="btn primary">
-          Check availability
-        </a>
-
-        <a href="#services" class="btn">
-          View services
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <div class="big">Flexible.</div>
-
-      <p>
-        Support can be arranged around your needs, availability
-        and the type of task you need help with.
-      </p>
-
-      <strong>From £20/hour</strong>
-
-      <p class="form-note">
-        A tailored quote is provided before any work begins.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="services">
-
-  <div class="wrap">
-
-    <div class="section-intro">
-
-      <div class="eyebrow">What I can help with</div>
-
-      <h2>Support that fits around you.</h2>
-
-      <p>
-        Choose the type of support you need, or get in touch
-        to discuss something more specific.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-
-      <div class="card">
-
-        <div class="icon">💻</div>
-
-        <h3>General Admin</h3>
-
-        <p>
-          Email support, data entry, spreadsheets, documents,
-          research, scheduling, correspondence and general admin.
-        </p>
-
-        <div class="price">£20/hour</div>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">👜</div>
-
-        <h3>Personal Assistant &amp; Errand Support</h3>
-
-        <p>
-          Practical help when you need an extra pair of hands,
-          including errands, shopping, collections, drop-offs,
-          posting parcels, appointment organisation and other
-          agreed PA tasks.
-        </p>
-
-        <div class="price">£30/hour</div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="about">
-
-  <div class="wrap about-inner">
-
-    <div class="eyebrow">Why Simply Supported</div>
-
-    <h2>Professional help, without the fuss.</h2>
-
-    <p>
-      Simply Supported provides flexible, practical support for
-      individuals and small businesses who need an extra pair
-      of hands without committing to another full-time employee.
-    </p>
-
-    <p>
-      Every request is considered individually and work is only
-      accepted where the task is within the agreed service,
-      experience and reasonable capabilities of the business.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section class="steps">
-
-  <div class="wrap">
-
-    <div class="section-intro">
-
-      <div class="eyebrow">How it works</div>
-
-      <h2>Simple from start to finish.</h2>
-
-    </div>
-
-
-    <div class="step-grid">
-
-
-      <div class="step">
-
-        <div class="step-number">01</div>
-
-        <h3>Tell me what you need</h3>
-
-        <p>
-          Send an enquiry with the type of support, preferred
-          date and any useful details.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-number">02</div>
-
-        <h3>We'll agree the details</h3>
-
-        <p>
-          I'll check availability and confirm whether the task
-          is something I can help with, along with the price.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-number">03</div>
-
-        <h3>Get the support you need</h3>
-
-        <p>
-          Once everything is agreed, I'll provide the support
-          at the arranged time.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="book" class="booking">
-
-  <div class="wrap">
-
-    <div class="booking-intro">
-
-      <div class="eyebrow">Bookings &amp; enquiries</div>
-
-      <h2>Tell me what you need.</h2>
-
-      <p>
-        Complete the form below and I'll review your request
-        and come back to you with availability and next steps.
-      </p>
-
-    </div>
-
-
-    <div class="form-card">
-
-      <form id="bookingForm">
-
-        <div class="field">
-
-          <label for="name">Name</label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-          >
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="email">Email</label>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-          >
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="service">Service</label>
-
-          <select
-            id="service"
-            name="service"
-            required
-          >
-
-            <option value="">Choose a service</option>
-
-            <option value="General Admin">
-              General Admin — £20/hour
-            </option>
-
-            <option value="Personal Assistant & Errand Support">
-              Personal Assistant & Errand Support — £30/hour
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="date">Preferred date</label>
-
-          <input
-            type="text"
-            id="date"
-            name="date"
-            placeholder="e.g. Saturday morning or 10:00–14:00"
-            required
-          >
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="hours">Approx. hours</label>
-
-          <input
-            type="text"
-            id="hours"
-            name="hours"
-            placeholder="e.g. 2 hours"
-          >
-
-        </div>
-
-
-        <div class="field">
-
-          <label for="requirements">
-            What do you need help with?
-          </label>
-
-          <textarea
-            id="requirements"
-            name="requirements"
-            placeholder="Tell me a little about what you need..."
-            required
-          ></textarea>
-
-        </div>
-
-
-        <button type="submit" class="submit">
-          Send enquiry
-        </button>
-
-
-        <p class="form-note">
-          Submitting this form opens an email to
-          simplysupported@protonmail.com.
-          Availability and price are confirmed before any work begins.
-        </p>
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-  <div class="wrap footer-grid">
-
-    <div class="footer-brand">
-
-      <strong>Simply Supported</strong>
-
-      <p>Flexible admin &amp; PA support</p>
-
-    </div>
-
-
-    <div class="footer-links">
-
-      <a href="terms.html">
-        Terms &amp; Conditions
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <div class="brand-name">Ready &amp; Sorted</div>
+        <div class="brand-subtitle">ADMIN • PA SUPPORT</div>
       </a>
 
-      <a href="privacy.html">
-        Privacy Policy
-      </a>
+      <a href="#booking" class="nav-button">Book support</a>
+    </div>
+  </header>
 
-      <a href="mailto:simplysupported@protonmail.com">
-        Email me
-      </a>
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">Flexible support, when you need it</div>
+
+          <h1>Extra hands, exactly when you need them.</h1>
+
+          <p class="hero-text">
+            Flexible admin and personal assistant support without the commitment
+            of taking on another full-time employee.
+          </p>
+
+          <div class="buttons">
+            <a href="#booking" class="button button-primary">
+              Check availability
+            </a>
+
+            <a href="#services" class="button button-secondary">
+              View services
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-card">
+          <h2>Flexible.</h2>
+
+          <p>
+            Practical support arranged around your requirements, availability
+            and the task you need help with.
+          </p>
+
+          <div class="price">From £20/hour</div>
+
+          <div class="small">
+            Quote provided before work begins.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">What I can help with</div>
+
+          <h2>Simple, practical support.</h2>
+
+          <p>
+            Choose the type of support you need, or get in touch to discuss
+            a task before booking.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <div class="service-card">
+            <h3>General Admin</h3>
+
+            <div class="service-price">£20 per hour</div>
+
+            <p>
+              Flexible administrative support for individuals and small
+              businesses.
+            </p>
+
+            <ul>
+              <li>Email support</li>
+              <li>Data entry</li>
+              <li>Spreadsheets</li>
+              <li>Document preparation</li>
+              <li>Research</li>
+              <li>Scheduling</li>
+              <li>Correspondence</li>
+              <li>General administrative tasks</li>
+            </ul>
+          </div>
+
+
+          <div class="service-card">
+            <h3>Personal Assistant &amp; Errand Support</h3>
+
+            <div class="service-price">£30 per hour</div>
+
+            <p>
+              Practical help with everyday tasks that are easier when
+              someone else takes care of them.
+            </p>
+
+            <ul>
+              <li>Errands</li>
+              <li>Shopping</li>
+              <li>Collections and drop-offs</li>
+              <li>Posting parcels</li>
+              <li>Appointment organisation</li>
+              <li>Practical PA tasks</li>
+              <li>Other agreed PA support</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="how">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">How it works</div>
+
+          <h2>Ready when you are.</h2>
+
+          <p>
+            No complicated packages or long-term commitments.
+            Just tell me what you need.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-number">1</div>
+
+            <h3>Tell me what you need</h3>
+
+            <p>
+              Send an enquiry with a few details about the task,
+              preferred date and approximate time required.
+            </p>
+          </div>
+
+
+          <div class="step">
+            <div class="step-number">2</div>
+
+            <h3>We’ll agree the details</h3>
+
+            <p>
+              I’ll review your request, confirm availability and provide
+              a quote before any work begins.
+            </p>
+          </div>
+
+
+          <div class="step">
+            <div class="step-number">3</div>
+
+            <h3>Get the support you need</h3>
+
+            <p>
+              Once your quote is accepted and payment has been received,
+              your booking is confirmed.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="why">
+      <div class="container">
+
+        <div class="why-box">
+          <div class="eyebrow">Why Ready &amp; Sorted?</div>
+
+          <h2>Professional help, without the fuss.</h2>
+
+          <p>
+            Ready &amp; Sorted provides flexible, practical support for
+            individuals and small businesses across Hertfordshire.
+          </p>
+
+          <p>
+            Every request is considered individually, with work accepted
+            only where it falls within the agreed service, experience
+            and reasonable capabilities.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="booking" id="booking">
+      <div class="container">
+
+        <div class="booking-box">
+
+          <h2>Tell me what you need</h2>
+
+          <p class="booking-intro">
+            Complete the form below and I’ll get back to you to discuss
+            availability and provide a quote.
+          </p>
+
+          <form
+            action="mailto:readyandsupported@proton.me"
+            method="post"
+            enctype="text/plain"
+          >
+
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              required
+            >
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="Email"
+              required
+            >
+
+            <label for="service">Service</label>
+            <select
+              id="service"
+              name="Service"
+              required
+            >
+              <option value="">Please select</option>
+              <option value="General Admin - £20 per hour">
+                General Admin — £20/hour
+              </option>
+              <option value="Personal Assistant & Errand Support - £30 per hour">
+                Personal Assistant &amp; Errand Support — £30/hour
+              </option>
+            </select>
+
+            <label for="date">Preferred date</label>
+            <input
+              type="date"
+              id="date"
+              name="Preferred date"
+            >
+
+            <label for="hours">Approx. hours</label>
+            <input
+              type="text"
+              id="hours"
+              name="Approximate hours"
+              placeholder="e.g. 2 hours"
+            >
+
+            <label for="message">What do you need help with?</label>
+            <textarea
+              id="message"
+              name="What do you need help with"
+              placeholder="Please tell me a little about what you need help with..."
+              required
+            ></textarea>
+
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Send enquiry
+            </button>
+
+            <div class="form-note">
+              Your enquiry does not create a booking. Availability and
+              pricing will be confirmed before work begins.
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-content">
+
+      <div>
+        <div class="footer-brand">Ready &amp; Sorted</div>
+
+        <div class="footer-text">
+          Flexible admin &amp; PA support
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:readyandsupported@proton.me">Email me</a>
+      </div>
 
     </div>
-
-  </div>
-
-</footer>
-
-
-<script>
-
-document.getElementById("bookingForm").addEventListener("submit", function(event){
-
-  event.preventDefault();
-
-  const name =
-    document.getElementById("name").value.trim();
-
-  const email =
-    document.getElementById("email").value.trim();
-
-  const service =
-    document.getElementById("service").value;
-
-  const date =
-    document.getElementById("date").value.trim();
-
-  const hours =
-    document.getElementById("hours").value.trim();
-
-  const requirements =
-    document.getElementById("requirements").value.trim();
-
-
-  const subject =
-    "Simply Supported booking enquiry — " + service;
-
-
-  const body =
-`Name: ${name}
-
-Email: ${email}
-
-Service: ${service}
-
-Preferred date/time: ${date}
-
-Approx. hours: ${hours}
-
-What do you need help with:
-${requirements}`;
-
-
-  window.location.href =
-    "mailto:simplysupported@protonmail.com" +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
-
-});
-
-</script>
+  </footer>
 
 </body>
 </html>
